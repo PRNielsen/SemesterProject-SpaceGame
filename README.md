@@ -2,9 +2,9 @@
 
 ## Getting Started
 
-Prerequisites
-JDK 8 or higher.
-Install [maven](https://maven.apache.org/download.cgi) and add it to your PATH.
+## Prerequisites
+- JDK 8 or higher.
+- Install [maven](https://maven.apache.org/download.cgi) and add it to your PATH.
 
 ### Compile project
 To compile the project:
