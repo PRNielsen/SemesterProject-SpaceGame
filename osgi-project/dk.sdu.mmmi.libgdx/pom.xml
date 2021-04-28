@@ -23,7 +23,7 @@
   <artifactId>dk.sdu.mmmi.libgdx</artifactId>
   <version>1.0-SNAPSHOT-001-SNAPSHOT</version>
 
-  <name>${bundle.symbolicName} ${wrapped.version} [osgi]</name>
+  <name>OSGilibGDX</name>
 
   <packaging>bundle</packaging>
 
