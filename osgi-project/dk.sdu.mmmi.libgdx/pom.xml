@@ -20,10 +20,10 @@
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.sonatype.mcookbook.osgi-project</groupId>
-  <artifactId>dk.sdu.mmmi.libgdx</artifactId>
+  <artifactId>Libgdx</artifactId>
   <version>1.0-SNAPSHOT-001-SNAPSHOT</version>
 
-  <name>${bundle.symbolicName} ${wrapped.version} [osgi]</name>
+  <name>Libgdx</name>
 
   <packaging>bundle</packaging>
 

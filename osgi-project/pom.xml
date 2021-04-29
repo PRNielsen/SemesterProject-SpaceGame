@@ -51,6 +51,7 @@
     <module>provision</module>
     <module>dk.sdu.mmmi.common</module>
     <module>dk.sdu.mmmi.libgdx</module>
+    <module>Core</module>
   </modules>
 
   <build>

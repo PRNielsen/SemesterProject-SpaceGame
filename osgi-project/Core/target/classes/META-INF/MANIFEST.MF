@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-Description: Generated using Pax-Construct
+Bundle-SymbolicName: dk.sdu.mmmi.core
+Built-By: Daniel Tran
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1619699646872
+Import-Package: com.badlogic.gdx,com.badlogic.gdx.backends.lwjgl,com.b
+ adlogic.gdx.graphics,com.badlogic.gdx.graphics.glutils,dk.sdu.mmmi.co
+ mmon.data;version="1.0.0.SNAPSHOT",dk.sdu.mmmi.common.services;versio
+ n="1.0.0.SNAPSHOT",dk.sdu.mmmi.core;version="1.0.0.SNAPSHOT",dk.sdu.m
+ mmi.core.managers;version="1.0.0.SNAPSHOT",org.osgi.framework
+Tool: Bnd-0.0.255
+Export-Package: dk.sdu.mmmi.core;uses:="dk.sdu.mmmi.core.managers,dk.s
+ du.mmmi.common.services,com.badlogic.gdx.backends.lwjgl,com.badlogic.
+ gdx,dk.sdu.mmmi.common.data,com.badlogic.gdx.graphics.glutils,com.bad
+ logic.gdx.graphics";version="1.0.0.SNAPSHOT",dk.sdu.mmmi.core.manager
+ s;uses:="com.badlogic.gdx,dk.sdu.mmmi.common.data";version="1.0.0.SNA
+ PSHOT"
+Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-Name: Core
+Private-Package: dk.sdu.mmmi.core.internal
+Ignore-Package: dk.sdu.mmmi.core.internal
+Bundle-Activator: dk.sdu.mmmi.core.internal.ExampleActivator
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.8.0_281
+
