@@ -23,14 +23,14 @@
     </dependency>
     <dependency>
       <groupId>org.sonatype.mcookbook.osgi-project</groupId>
-      <artifactId>dk.sdu.mmmi.common</artifactId>
+      <artifactId>Common</artifactId>
       <version>1.0-SNAPSHOT</version>
       <type>bundle</type>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.sonatype.mcookbook.osgi-project</groupId>
-      <artifactId>dk.sdu.mmmi.libgdx</artifactId>
+      <artifactId>Libgdx</artifactId>
       <version>1.0-SNAPSHOT-001-SNAPSHOT</version>
       <type>bundle</type>
       <scope>provided</scope>
@@ -45,6 +45,31 @@
       <groupId>com.diffplug.osgi</groupId>
       <artifactId>com.diffplug.osgi.extension.sun.reflect</artifactId>
       <version>0.0.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.core</artifactId>
+      <version>4.3.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.sonatype.mcookbook.osgi-project</groupId>
+      <artifactId>Core</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <type>bundle</type>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.sonatype.mcookbook.osgi-project</groupId>
+      <artifactId>Common</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.sonatype.mcookbook.osgi-project</groupId>
+      <artifactId>Libgdx</artifactId>
+      <version>1.0-SNAPSHOT-001-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
