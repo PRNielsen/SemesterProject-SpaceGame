@@ -1,4 +1,4 @@
-package dk.sdu.mmmi.common.data.PositionPart.java;
+package dk.sdu.mmmi.common.data.entitypart;
 
 public class PositionPart {
 
@@ -36,9 +36,9 @@ public class PositionPart {
         this.radians = radians;
     }
 
-    @Override
-    public void process(GameData gameData, Entity entity) {
-    }
+//    @Override
+//    public void process(GameData gameData, Entity entity) {
+//    }
 
 
 

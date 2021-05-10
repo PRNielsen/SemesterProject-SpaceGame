@@ -1,4 +1,6 @@
-package dk.sdu.mmmi.player.Player;
+package dk.sdu.mmmi.player;
+
+import dk.sdu.mmmi.common.data.Entity;
 
 public class Player<atk_dmg, health> extends Entity {
 

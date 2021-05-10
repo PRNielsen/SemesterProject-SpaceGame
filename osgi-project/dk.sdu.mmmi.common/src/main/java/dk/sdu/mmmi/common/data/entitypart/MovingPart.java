@@ -1,82 +1,84 @@
-package dk.sdu.mmmi.common.data.MovingPart;
+package dk.sdu.mmmi.common.data.entitypart;
 
-private float dx, dy;
-private float deceleration, acceleration;
-private float maxSpeed;
-private boolean left, right, up, down;
+public class MovingPart {
 
-public MovementPart(float deceleration, float acceleration, float maxSpeed) {
+    private float dx, dy;
+    private float deceleration, acceleration;
+    private float maxSpeed;
+    private boolean left, right, up, down;
+
+    public MovingPart(float deceleration, float acceleration, float maxSpeed) {
         this.deceleration = deceleration;
         this.acceleration = acceleration;
         this.maxSpeed = maxSpeed;
     }
 
-public float getDx() {
+    public float getDx() {
         return dx;
     }
 
-public float getDy() {
+    public float getDy() {
         return dy;
     }
 
-public void setDeceleration(float deceleration) {
+    public void setDeceleration(float deceleration) {
         this.deceleration = deceleration;
     }
 
-public  void setAcceleration(float acceleration) {
+    public void setAcceleration(float acceleration) {
         this.acceleration = acceleration;
     }
 
-public void setMaxSpeed(float maxSpeed) {
+    public void setMaxSpeed(float maxSpeed) {
         this.maxSpeed = maxSpeed;
     }
 
-public void setSpeed(float speed) {
+    public void setSpeed(float speed) {
         this.acceleration = speed;
         this.maxSpeed = speed;
     }
 
-public void setLeft(boolean left) {
+    public void setLeft(boolean left) {
         this.left = left;
 
     }
 
-public void setRight(boolean right) {
+    public void setRight(boolean right) {
         this.left = left;
 
     }
 
-public void setUp(boolean up) {
+    public void setUp(boolean up) {
         this.up = up;
 
     }
 
-public void setDown(boolean down) {
+    public void setDown(boolean down) {
         this.down = down;
 
     }
 
-@Override
-public void process(GameData gameData, Entity entity) {
-        PositionPart positionPart = entity.getPart(PositionPart.class);
-        float x = positionPart.getX();
-        float y = positionPart.getY();
-        float dt = gameData.getDelta();
-
-        while (up) {
-        y = positionPart.getY() + maxSpeed;
-        }
-
-        while (left) {
-        x = positionPart.getX() - maxSpeed;
-        }
-
-        while (down) {
-        y = positionPart.getY() - maxSpeed;
-        }
-
-        while (right){
-        x = positionPart.getX() + maxSpeed;
-        }
-    }
+//    @Override
+//    public void process(GameData gameData, Entity entity) {
+//        PositionPart positionPart = entity.getPart(PositionPart.class);
+//        float x = positionPart.getX();
+//        float y = positionPart.getY();
+//        float dt = gameData.getDelta();
+//
+//        while (up) {
+//            y = positionPart.getY() + maxSpeed;
+//        }
+//
+//        while (left) {
+//            x = positionPart.getX() - maxSpeed;
+//        }
+//
+//        while (down) {
+//            y = positionPart.getY() - maxSpeed;
+//        }
+//
+//        while (right) {
+//            x = positionPart.getX() + maxSpeed;
+//        }
+//    }
 }

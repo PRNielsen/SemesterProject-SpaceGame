@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Created-By: Apache Maven Bundle Plugin
+Tool: Bnd-0.0.255
+Bnd-LastModified: 1620644786481
+Export-Package: dk.sdu.mmmi.player;uses:="dk.sdu.mmmi.common.data";versi
+ on="1.0.0.SNAPSHOT"
+Import-Package: dk.sdu.mmmi.common.data;version="1.0.0.SNAPSHOT",dk.sdu.
+ mmmi.player;version="1.0.0.SNAPSHOT",dk.sdu.mmmi.player.internal
+Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-SymbolicName: dk.sdu.mmmi.player
+Bundle-Description: Generated using Pax-Construct
+Bundle-Activator: dk.sdu.mmmi.player.internal.ExampleActivator
+Bundle-Name: dk.sdu.mmmi.player
+Private-Package: dk.sdu.mmmi.player.internal.*
+Built-By: Shark
+Build-Jdk: 13.0.1
+

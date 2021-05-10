@@ -35,6 +35,7 @@
     <dependency>
       <groupId>org.sonatype.mcookbook.osgi-project</groupId>
       <artifactId>Common</artifactId>
+      <version>1.0-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.osgi</groupId>
