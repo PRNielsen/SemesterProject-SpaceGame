@@ -3,7 +3,7 @@ Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: dk.sdu.mmmi.core
 Built-By: Shark
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1620044781448
+Bnd-LastModified: 1620646734167
 Bundle-ActivationPolicy: lazy
 Import-Package: com.badlogic.gdx,com.badlogic.gdx.backends.lwjgl,com.b
  adlogic.gdx.graphics,com.badlogic.gdx.graphics.glutils,dk.sdu.mmmi.co
