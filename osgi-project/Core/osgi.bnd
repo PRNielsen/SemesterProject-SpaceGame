@@ -2,6 +2,6 @@
 # Use this file to add customized Bnd instructions for the bundle
 #-----------------------------------------------------------------
 
-Bundle-SymbolicName: dk.sdu.mmmi.core
-Bundle-ActivationPolicy: lazy
+Bundle-SymbolicName: Core
+#Bundle-ActivationPolicy: lazy
 Service-Component: META-INF/core.xml
