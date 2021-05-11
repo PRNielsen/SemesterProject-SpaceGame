@@ -10,60 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87569c58-0016-46b8-a3ce-dc74e1e04ffd" name="Default Changelist" comment="Added Core Component + Some Common classes">
-      <change afterPath="$PROJECT_DIR$/.idea/SemesterprojektF21.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/Core/osgi.bnd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/Core/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/Core/src/main/java/dk/sdu/mmmi/core/ExampleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/Core/src/main/java/dk/sdu/mmmi/core/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/Core/src/main/java/dk/sdu/mmmi/core/internal/ExampleActivator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/Core/src/main/java/dk/sdu/mmmi/core/internal/ExampleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/Core/src/main/java/dk/sdu/mmmi/core/managers/GameInputProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/Core/src/main/resources/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/Core/target/Core-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/Core/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/Core/target/classes/dk/sdu/mmmi/core/ExampleService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/Core/target/classes/dk/sdu/mmmi/core/Game.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/Core/target/classes/dk/sdu/mmmi/core/internal/ExampleActivator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/Core/target/classes/dk/sdu/mmmi/core/internal/ExampleServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/Core/target/classes/dk/sdu/mmmi/core/managers/GameInputProcessor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/Core/target/classes/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/data/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/data/GameData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/data/GameKeys.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/data/World.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/data/entitypart/EntityPart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/events/Event.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/services/IEntityProcessingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/services/IGamePluginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/services/IPostEntityProcessingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/target/Common-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/target/classes/dk/sdu/mmmi/common/data/Entity.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/target/classes/dk/sdu/mmmi/common/data/GameData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/target/classes/dk/sdu/mmmi/common/data/GameKeys.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/target/classes/dk/sdu/mmmi/common/data/World.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/target/classes/dk/sdu/mmmi/common/data/entitypart/EntityPart.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/target/classes/dk/sdu/mmmi/common/events/Event.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/target/classes/dk/sdu/mmmi/common/services/IEntityProcessingService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/target/classes/dk/sdu/mmmi/common/services/IGamePluginService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/target/classes/dk/sdu/mmmi/common/services/IPostEntityProcessingService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.libgdx/target/Libgdx-1.0-SNAPSHOT-001-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/internal/ExampleActivator.java" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/internal/ExampleActivator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/target/classes/dk/sdu/mmmi/common/internal/ExampleActivator.class" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/target/classes/dk/sdu/mmmi/common/internal/ExampleActivator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/target/dk.sdu.mmmi.common-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.libgdx/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.libgdx/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.libgdx/target/classes/.netbeans_automatic_build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.libgdx/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.libgdx/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.libgdx/target/dk.sdu.mmmi.libgdx-1.0-SNAPSHOT-001-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.libgdx/target/test-classes/.netbeans_automatic_build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/osgi-project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="87569c58-0016-46b8-a3ce-dc74e1e04ffd" name="Default Changelist" comment="Added Player Component + Some Entity parts" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,7 +48,16 @@
       <workItem from="1619618017313" duration="2292000" />
       <workItem from="1619691379774" duration="2205000" />
       <workItem from="1619700203386" duration="311000" />
+      <workItem from="1620767888729" duration="123000" />
     </task>
+    <task id="LOCAL-00001" summary="Added Player Component + Some Entity parts">
+      <created>1620767968906</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620767968906</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +77,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Core Component + Some Common classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Core Component + Some Common classes" />
+    <MESSAGE value="Added Player Component + Some Entity parts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Player Component + Some Entity parts" />
   </component>
   <component name="WindowStateProjectService">
     <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1619699894526">
