@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dk.sdu.mmmi.common/Common.iml" filepath="$PROJECT_DIR$/dk.sdu.mmmi.common/Common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core/Core.iml" filepath="$PROJECT_DIR$/Core/Core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dk.sdu.mmmi.libgdx/Libgdx.iml" filepath="$PROJECT_DIR$/dk.sdu.mmmi.libgdx/Libgdx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dk.sdu.mmmi.player/Player.iml" filepath="$PROJECT_DIR$/dk.sdu.mmmi.player/Player.iml" />
+      <module fileurl="file://$PROJECT_DIR$/poms/compiled/compiled-bundle-settings.iml" filepath="$PROJECT_DIR$/poms/compiled/compiled-bundle-settings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/osgi-project.iml" filepath="$PROJECT_DIR$/osgi-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provision/provision.iml" filepath="$PROJECT_DIR$/provision/provision.iml" />
+      <module fileurl="file://$PROJECT_DIR$/poms/shared-plugin-settings.iml" filepath="$PROJECT_DIR$/poms/shared-plugin-settings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/poms/wrappers/wrapper-bundle-settings.iml" filepath="$PROJECT_DIR$/poms/wrappers/wrapper-bundle-settings.iml" />
+    </modules>
+  </component>
+</project>

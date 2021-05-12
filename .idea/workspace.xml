@@ -10,7 +10,34 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87569c58-0016-46b8-a3ce-dc74e1e04ffd" name="Default Changelist" comment="Added Player Component + Some Entity parts" />
+    <list default="true" id="87569c58-0016-46b8-a3ce-dc74e1e04ffd" name="Default Changelist" comment="Added Player Component + Some Entity parts">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/Core/src/main/java/dk/sdu/mmmi/core/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/Core/src/main/java/dk/sdu/mmmi/core/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/data/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/data/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/data/GameKeys.java" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/data/GameKeys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/data/entitypart/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/data/entitypart/Movement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.player/src/main/java/dk/sdu/mmmi/player/PlayerControlSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.player/src/main/java/dk/sdu/mmmi/player/PlayerControlSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.player/src/main/java/dk/sdu/mmmi/player/PlayerPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.player/src/main/java/dk/sdu/mmmi/player/PlayerPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/bundles/Core_1.0.0.SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/bundles/Core_1.0.0.SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/bundles/dk.sdu.mmmi.common_1.0.0.SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/bundles/dk.sdu.mmmi.common_1.0.0.SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/bundles/dk.sdu.mmmi.libgdx_0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/bundles/dk.sdu.mmmi.libgdx_0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/bundles/dk.sdu.mmmi.player_1.0.0.SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/bundles/dk.sdu.mmmi.player_1.0.0.SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle1/bundle.info" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle1/bundle.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle10/bundle.info" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle10/bundle.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle11/bundle.info" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle11/bundle.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle2/bundle.info" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle2/bundle.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle3/bundle.info" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle3/bundle.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle4/bundle.info" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle4/bundle.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle5/bundle.info" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle5/bundle.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle5/version0.0/bundle.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle5/version0.0/bundle.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle6/bundle.info" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle6/bundle.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle7/bundle.info" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle7/bundle.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle7/version0.0/bundle.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle7/version0.0/bundle.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle8/bundle.info" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle8/bundle.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle8/version0.0/bundle.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle8/version0.0/bundle.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle9/bundle.info" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle9/bundle.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle9/version0.0/bundle.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle9/version0.0/bundle.jar" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,6 +76,8 @@
       <workItem from="1619691379774" duration="2205000" />
       <workItem from="1619700203386" duration="311000" />
       <workItem from="1620767888729" duration="123000" />
+      <workItem from="1620780569718" duration="1000000" />
+      <workItem from="1620786695182" duration="50000" />
     </task>
     <task id="LOCAL-00001" summary="Added Player Component + Some Entity parts">
       <created>1620767968906</created>
@@ -81,10 +110,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added Player Component + Some Entity parts" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620781567970">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1620781567970" />
     <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1619699894526">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619699894526" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1620781313898">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1620781313898" />
     <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619620764233">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -93,5 +130,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="660" y="308" key="git4idea.merge.GitPullDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619618424394" />
+    <state x="551" y="181" key="new project wizard" timestamp="1620786743549">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="551" y="181" key="new project wizard/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1620786743549" />
   </component>
 </project>
