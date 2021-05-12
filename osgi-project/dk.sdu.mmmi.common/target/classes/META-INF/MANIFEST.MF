@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: dk.sdu.mmmi.common
-Built-By: Shark
+Built-By: asbjo
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1620646725864
+Bnd-LastModified: 1620721575003
 Import-Package: dk.sdu.mmmi.common;version="1.0.0.SNAPSHOT",dk.sdu.mmm
  i.common.data;version="1.0.0.SNAPSHOT",dk.sdu.mmmi.common.data.entity
  part;version="1.0.0.SNAPSHOT",dk.sdu.mmmi.common.events;version="1.0.
@@ -23,5 +23,5 @@ Private-Package: dk.sdu.mmmi.common.internal
 Ignore-Package: dk.sdu.mmmi.common.internal
 Bundle-Activator: dk.sdu.mmmi.common.internal.ExampleActivator
 Created-By: Apache Maven Bundle Plugin
-Build-Jdk: 1.8.0_281
+Build-Jdk: 1.8.0_282
 

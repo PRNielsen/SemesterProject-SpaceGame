@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-Description: Simple OSGi wrapper around third-party jar(s)
 Bundle-SymbolicName: dk.sdu.mmmi.libgdx
-Built-By: Shark
+Built-By: asbjo
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1620646728003
+Bnd-LastModified: 1620721582194
 Embed-Dependency: *;scope=compile|runtime;type=!pom;inline=true
 Import-Package: com.badlogic,com.badlogic.gdx,com.badlogic.gdx.assets,
  com.badlogic.gdx.assets.loaders,com.badlogic.gdx.assets.loaders.resol
@@ -268,5 +268,5 @@ Ignore-Package: org.osgi.framework.launch,japa.parser.ast.visitor,japa
 Private-Package: !*
 Embed-Transitive: true
 Created-By: Apache Maven Bundle Plugin
-Build-Jdk: 1.8.0_281
+Build-Jdk: 1.8.0_282
 

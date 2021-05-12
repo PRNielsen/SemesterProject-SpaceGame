@@ -1,4 +1,4 @@
-package dk.sdu.mmmi.common;
+package dk.sdu.mmmi.room;
 
 /**
  * Public API representing an example OSGi service

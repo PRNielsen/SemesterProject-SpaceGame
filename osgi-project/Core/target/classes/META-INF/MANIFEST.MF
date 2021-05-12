@@ -1,26 +1,28 @@
 Manifest-Version: 1.0
 Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: dk.sdu.mmmi.core
-Built-By: Shark
+Built-By: asbjo
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1620646734167
+Bnd-LastModified: 1620721592508
 Bundle-ActivationPolicy: lazy
 Import-Package: com.badlogic.gdx,com.badlogic.gdx.backends.lwjgl,com.b
- adlogic.gdx.graphics,com.badlogic.gdx.graphics.glutils,dk.sdu.mmmi.co
- mmon.data;version="1.0.0.SNAPSHOT",dk.sdu.mmmi.common.services;versio
- n="1.0.0.SNAPSHOT",dk.sdu.mmmi.core;version="1.0.0.SNAPSHOT",dk.sdu.m
- mmi.core.managers;version="1.0.0.SNAPSHOT"
+ adlogic.gdx.graphics,com.badlogic.gdx.graphics.glutils,com.badlogic.g
+ dx.maps.tiled,com.badlogic.gdx.maps.tiled.renderers,dk.sdu.mmmi.commo
+ n.data;version="1.0.0.SNAPSHOT",dk.sdu.mmmi.common.services;version="
+ 1.0.0.SNAPSHOT",dk.sdu.mmmi.core;version="1.0.0.SNAPSHOT",dk.sdu.mmmi
+ .core.managers;version="1.0.0.SNAPSHOT"
 Service-Component: META-INF/core.xml
 Tool: Bnd-0.0.255
-Export-Package: dk.sdu.mmmi.core;uses:="dk.sdu.mmmi.core.managers,dk.s
- du.mmmi.common.services,com.badlogic.gdx.backends.lwjgl,com.badlogic.
- gdx,dk.sdu.mmmi.common.data,com.badlogic.gdx.graphics.glutils,com.bad
- logic.gdx.graphics";version="1.0.0.SNAPSHOT",dk.sdu.mmmi.core.manager
- s;uses:="com.badlogic.gdx,dk.sdu.mmmi.common.data";version="1.0.0.SNA
- PSHOT"
+Export-Package: dk.sdu.mmmi.core;uses:="com.badlogic.gdx.maps.tiled.re
+ nderers,com.badlogic.gdx.backends.lwjgl,com.badlogic.gdx,dk.sdu.mmmi.
+ common.data,com.badlogic.gdx.graphics,com.badlogic.gdx.maps.tiled,dk.
+ sdu.mmmi.core.managers,dk.sdu.mmmi.common.services,com.badlogic.gdx.g
+ raphics.glutils";version="1.0.0.SNAPSHOT",dk.sdu.mmmi.core.managers;u
+ ses:="com.badlogic.gdx,dk.sdu.mmmi.common.data";version="1.0.0.SNAPSH
+ OT"
 Bundle-Version: 1.0.0.SNAPSHOT
 Bundle-Name: Core
 Private-Package: dk.sdu.mmmi.core.internal.*
 Created-By: Apache Maven Bundle Plugin
-Build-Jdk: 1.8.0_281
+Build-Jdk: 1.8.0_282
 
