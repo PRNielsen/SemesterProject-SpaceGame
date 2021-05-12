@@ -6,10 +6,12 @@ import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import dk.sdu.mmmi.common.data.Entity;
 import dk.sdu.mmmi.common.data.GameData;
 import dk.sdu.mmmi.common.data.World;
+import dk.sdu.mmmi.common.data.entitypart.Position;
 import dk.sdu.mmmi.common.services.IEntityProcessingService;
 import dk.sdu.mmmi.common.services.IGamePluginService;
 import dk.sdu.mmmi.common.services.IPostEntityProcessingService;
@@ -21,6 +23,7 @@ public class Game implements ApplicationListener {
 
     private static OrthographicCamera cam;
     private ShapeRenderer sr;
+    private SpriteBatch batch;
     private final GameData gameData = new GameData();
     private static World world = new World();
     private static final List<IEntityProcessingService> entityProcessorList = new CopyOnWriteArrayList<>();
@@ -33,7 +36,7 @@ public class Game implements ApplicationListener {
 
     public void init() {
         LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
-        cfg.title = "Asteroids";
+        cfg.title = "SpaceGame";
         cfg.width = 800;
         cfg.height = 600;
         cfg.useGL30 = false;
@@ -52,7 +55,7 @@ public class Game implements ApplicationListener {
         cam.update();
 
         sr = new ShapeRenderer();
-
+        batch = new SpriteBatch();
         Gdx.input.setInputProcessor(new GameInputProcessor(gameData));
 
     }
@@ -97,8 +100,17 @@ public class Game implements ApplicationListener {
 
                 sr.line(shapex[i], shapey[i], shapex[j], shapey[j]);
             }
-
             sr.end();
+            sr.begin(ShapeRenderer.ShapeType.Line);
+            sr.setColor(0, 1, 0, 1);
+            Position positionPart = entity.getPart(Position.class);
+            float x = positionPart.getX();
+            float y = positionPart.getY();
+            sr.circle(x, y, 50);
+            sr.end();
+            //batch.begin();
+            //batch.draw(entity.getImage(), 300, 400);
+            //batch.end();
         }
     }
 
@@ -116,6 +128,7 @@ public class Game implements ApplicationListener {
 
     @Override
     public void dispose() {
+        batch.dispose();
     }
 
     public void addEntityProcessingService(IEntityProcessingService eps) {

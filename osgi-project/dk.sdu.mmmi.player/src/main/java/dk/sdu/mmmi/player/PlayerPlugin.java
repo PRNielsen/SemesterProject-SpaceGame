@@ -3,6 +3,7 @@ package dk.sdu.mmmi.player;
 import dk.sdu.mmmi.common.data.Entity;
 import dk.sdu.mmmi.common.data.GameData;
 import dk.sdu.mmmi.common.data.World;
+import dk.sdu.mmmi.common.data.entitypart.Combat;
 import dk.sdu.mmmi.common.data.entitypart.Health;
 import dk.sdu.mmmi.common.data.entitypart.Movement;
 import dk.sdu.mmmi.common.data.entitypart.Position;
@@ -28,19 +29,22 @@ public class PlayerPlugin implements IGamePluginService {
 
     private Entity createPlayer(GameData gameData) {
 
-        float deacceleration = 10;
+        float deacceleration = 1000;
         float acceleration = 200;
         float maxSpeed = 300;
         float rotationSpeed = 5;
         float x = /*gameData.getDisplayWidth()*/ + 400;
         float y = /*gameData.getDisplayHeight()*/ + 300;
         float radians = 3.1415f / 2;
+        int atkDmg = 1;
+        int range = 50;
 
         Entity player = new Player();
         player.setRadius(8);
         player.add(new Movement(deacceleration, acceleration, maxSpeed, rotationSpeed));
         player.add(new Position(x, y, radians));
         player.add(new Health(1));
+        player.add(new Combat(atkDmg, range));
 
         return player;
     }

@@ -1,6 +1,8 @@
 package dk.sdu.mmmi.player;
 
 //import dk.sdu.mmmi.common.bullet.BulletSPI;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Texture;
 import dk.sdu.mmmi.common.data.Entity;
 import dk.sdu.mmmi.common.data.GameData;
 import dk.sdu.mmmi.common.data.GameKeys;
@@ -9,6 +11,7 @@ import dk.sdu.mmmi.common.data.entitypart.Health;
 import dk.sdu.mmmi.common.data.entitypart.Movement;
 import dk.sdu.mmmi.common.data.entitypart.Position;
 import dk.sdu.mmmi.common.services.IEntityProcessingService;
+import java.io.File;
 //import com.badlogic.gdx.assets.AssetManager;
 
 public class PlayerControlSystem implements IEntityProcessingService {
@@ -17,22 +20,24 @@ public class PlayerControlSystem implements IEntityProcessingService {
     public void process(GameData gameData, World world) {
 
         for (Entity player : world.getEntities(Player.class)) {
-            Position positionPart = player.getPart(Position.class);
-            Movement movingPart = player.getPart(Movement.class);
-            Health lifePart = player.getPart(Health.class);
+            Position position = player.getPart(Position.class);
+            Movement movement = player.getPart(Movement.class);
+            Health health = player.getPart(Health.class);
 
-            movingPart.setLeft(gameData.getKeys().isDown(GameKeys.LEFT));
-            movingPart.setRight(gameData.getKeys().isDown(GameKeys.RIGHT));
-            movingPart.setUp(gameData.getKeys().isDown(GameKeys.UP));
+            movement.setLeft(gameData.getKeys().isDown(GameKeys.LEFT));
+            movement.setRight(gameData.getKeys().isDown(GameKeys.RIGHT));
+            movement.setUp(gameData.getKeys().isDown(GameKeys.UP));
+            movement.setDown(gameData.getKeys().isDown(GameKeys.DOWN));
+            movement.setSpace(gameData.getKeys().isDown(GameKeys.SPACE));
 
             /*if (gameData.getKeys().isDown(GameKeys.SPACE)) {
                 Entity bullet = Lookup.getDefault().lookup(BulletSPI.class).createBullet(player, gameData);
                 world.addEntity(bullet);
             }*/
 
-            movingPart.process(gameData, player);
-            positionPart.process(gameData, player);
-            lifePart.process(gameData, player);
+            movement.process(gameData, player);
+            position.process(gameData, player);
+            health.process(gameData, player);
 
             updateShape(player);
 
@@ -63,7 +68,7 @@ public class PlayerControlSystem implements IEntityProcessingService {
         entity.setShapeY(shapey);
         
         
-        //entity.setImage();
+        //entity.setImage(new Texture(Gdx.files.internal("bundles/dk.sdu.mmmi.player_1.0.0.SNAPSHOT.jar/assets/Smukkeste.png")));
         
     }
 

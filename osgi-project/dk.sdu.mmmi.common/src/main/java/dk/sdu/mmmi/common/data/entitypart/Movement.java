@@ -24,7 +24,7 @@ public class Movement
     private float dx, dy;
     private float deceleration, acceleration;
     private float maxSpeed, rotationSpeed;
-    private boolean left, right, up;
+    private boolean left, right, up, down, space;
 
     public Movement(float deceleration, float acceleration, float maxSpeed, float rotationSpeed) {
         this.deceleration = deceleration;
@@ -73,6 +73,14 @@ public class Movement
     public void setUp(boolean up) {
         this.up = up;
     }
+    
+    public void setDown(boolean down) {
+        this.down = down;
+    }
+    
+    public void setSpace(boolean space) {
+        this.space = space;
+    }
 
     @Override
     public void process(GameData gameData, Entity entity) {
@@ -82,26 +90,45 @@ public class Movement
         float radians = positionPart.getRadians();
         float dt = gameData.getDelta();
 
-        // turning
         if (left) {
-            radians += rotationSpeed * dt;
+            dx -= acceleration * dt;
+            
         }
 
         if (right) {
-            radians -= rotationSpeed * dt;
+            dx += acceleration * dt;
+            
         }
-
-        // accelerating            
+           
         if (up) {
-            dx += cos(radians) * acceleration * dt;
-            dy += sin(radians) * acceleration * dt;
+            //dx += cos(radians) * acceleration * dt;
+            //dy += sin(radians) * acceleration * dt;
+            dy += acceleration * dt;
+            //dx += acceleration * dt;
+        }
+        
+        if (down) {
+            dy -= acceleration * dt;
+            //dx -= acceleration * dt;
+        }
+        
+        if (space) {
+            //dy = 0;
+            //dx = 0;
+            dx += acceleration * dt;
         }
 
         // deccelerating
         float vec = (float) sqrt(dx * dx + dy * dy);
         if (vec > 0) {
+           if(!(left || right || up || down)){
             dx -= (dx / vec) * deceleration * dt;
             dy -= (dy / vec) * deceleration * dt;
+            if(vec <20){
+                dx = 0;
+                dy = 0;
+            }
+            }
         }
         if (vec > maxSpeed) {
             dx = (dx / vec) * maxSpeed;
