@@ -53,8 +53,8 @@
     <module>dk.sdu.mmmi.libgdx</module>
     <module>Core</module>
     <module>dk.sdu.mmmi.player</module>
-    <module>Attack</module>
-    <module>DummyEnemy</module>
+<!--    <module>Attack</module>  -->
+<!--    <module>DummyEnemy</module> -->
     <module>dk.sdu.mmmi.room</module>
   </modules>
 

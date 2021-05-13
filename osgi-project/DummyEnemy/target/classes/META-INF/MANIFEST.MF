@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: DummyEnemy
-Built-By: Daniel Tran
+Built-By: asbjo
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1620838151744
+Bnd-LastModified: 1620898511082
 Bundle-ActivationPolicy: lazy
 Import-Package: dk.sdu.mmmi.common.data,dk.sdu.mmmi.common.data.entity
  part,dk.sdu.mmmi.common.services,dk.sdu.mmmi.dummyEnemy;version="1.0.
@@ -18,5 +18,5 @@ Bundle-Version: 1.0.0.SNAPSHOT
 Bundle-Name: DummyEnemy
 Private-Package: dk.sdu.mmmi.dummyEnemy.internal.*
 Created-By: Apache Maven Bundle Plugin
-Build-Jdk: 1.8.0_281
+Build-Jdk: 1.8.0_282
 
