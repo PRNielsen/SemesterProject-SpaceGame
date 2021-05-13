@@ -30,7 +30,7 @@ public class PlayerPlugin implements IGamePluginService {
     private Entity createPlayer(GameData gameData) {
 
         float deacceleration = 1000;
-        float acceleration = 200;
+        float acceleration = 280;
         float maxSpeed = 300;
         float rotationSpeed = 5;
         float x = /*gameData.getDisplayWidth()*/ + 400;

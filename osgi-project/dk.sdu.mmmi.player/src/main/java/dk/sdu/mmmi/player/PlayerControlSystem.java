@@ -1,6 +1,5 @@
 package dk.sdu.mmmi.player;
 
-//import dk.sdu.mmmi.common.bullet.BulletSPI;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import dk.sdu.mmmi.common.data.Entity;

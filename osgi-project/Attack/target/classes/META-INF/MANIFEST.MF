@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: Attack
-Built-By: Daniel Tran
+Built-By: asbjo
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1620838149208
+Bnd-LastModified: 1620898509022
 Bundle-ActivationPolicy: lazy
 Import-Package: dk.sdu.mmmi.attack;version="1.0.0.SNAPSHOT",dk.sdu.mmm
  i.common.data,dk.sdu.mmmi.common.data.entitypart,dk.sdu.mmmi.common.s
@@ -17,5 +17,5 @@ Bundle-Version: 1.0.0.SNAPSHOT
 Bundle-Name: Attack
 Private-Package: dk.sdu.mmmi.attack.internal.*
 Created-By: Apache Maven Bundle Plugin
-Build-Jdk: 1.8.0_281
+Build-Jdk: 1.8.0_282
 
