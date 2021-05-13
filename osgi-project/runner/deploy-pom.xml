@@ -74,6 +74,13 @@
     </dependency>
     <dependency>
       <groupId>org.sonatype.mcookbook.osgi-project</groupId>
+      <artifactId>AttackSystem</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <type>bundle</type>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.sonatype.mcookbook.osgi-project</groupId>
       <artifactId>Player</artifactId>
       <version>1.0-SNAPSHOT</version>
       <type>bundle</type>
@@ -81,9 +88,8 @@
     </dependency>
     <dependency>
       <groupId>org.sonatype.mcookbook.osgi-project</groupId>
-      <artifactId>Attack</artifactId>
+      <artifactId>AttackSystem</artifactId>
       <version>1.0-SNAPSHOT</version>
-      <type>bundle</type>
       <scope>provided</scope>
     </dependency>
     <dependency>

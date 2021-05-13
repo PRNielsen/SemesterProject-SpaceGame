@@ -91,15 +91,15 @@ public class Movement
         float dt = gameData.getDelta();
 
         if (left) {
-            dx -= acceleration * dt;
+            this.dx -= acceleration * dt;
             
         }
 
         if (right) {
-            dx += acceleration * dt;
+            this.dx += acceleration * dt;
             
         }
-           
+             
         if (up) {
             //dx += cos(radians) * acceleration * dt;
             //dy += sin(radians) * acceleration * dt;
@@ -113,30 +113,28 @@ public class Movement
         }
         
         if (space) {
-            //dy = 0;
-            //dx = 0;
-            dx += acceleration * dt;
+            this.dx = dx + acceleration * dt;
         }
-
+        
         // deccelerating
-        float vec = (float) sqrt(dx * dx + dy * dy);
+        float vec = (float) sqrt(this.dx * this.dx + dy * dy);
         if (vec > 0) {
-           if(!(left || right || up || down)){
-            dx -= (dx / vec) * deceleration * dt;
+           if(!(left || right || up || down || space)){
+            this.dx -= (this.dx / vec) * deceleration * dt;
             dy -= (dy / vec) * deceleration * dt;
             if(vec <20){
-                dx = 0;
+                this.dx = 0;
                 dy = 0;
             }
             }
         }
         if (vec > maxSpeed) {
-            dx = (dx / vec) * maxSpeed;
+            this.dx = (this.dx / vec) * maxSpeed;
             dy = (dy / vec) * maxSpeed;
         }
 
         // set position
-        x += dx * dt;
+        x += this.dx * dt;
         if (x > gameData.getDisplayWidth()) {
             x = 0;
         } else if (x < 0) {

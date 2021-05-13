@@ -35,13 +35,13 @@ public class EnemyPlugin implements IGamePluginService {
         float y = 200;//gameData.getDisplayHeight() / 3;
         float radians = 3.1415f / 2;
         int atkDmg = 1;
-        int range = 50;
+        int range = 100;
         
         enemyShip.add(new Health(3));
         enemyShip.setRadius(4);
         enemyShip.add(new Movement(deacceleration, acceleration, maxSpeed, rotationSpeed));
         enemyShip.add(new Position(x, y, radians));
-        enemyShip.add(new Combat(atkDmg, range));
+        //enemyShip.add(new Combat(atkDmg, range));
         
         return enemyShip;
     }

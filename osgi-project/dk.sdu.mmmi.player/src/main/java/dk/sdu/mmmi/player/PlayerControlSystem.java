@@ -1,8 +1,7 @@
 package dk.sdu.mmmi.player;
 
 //import dk.sdu.mmmi.common.bullet.BulletSPI;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Texture;
+import dk.sdu.mmmi.attack.AttackSystemSPI;
 import dk.sdu.mmmi.common.data.Entity;
 import dk.sdu.mmmi.common.data.GameData;
 import dk.sdu.mmmi.common.data.GameKeys;
@@ -11,11 +10,12 @@ import dk.sdu.mmmi.common.data.entitypart.Health;
 import dk.sdu.mmmi.common.data.entitypart.Movement;
 import dk.sdu.mmmi.common.data.entitypart.Position;
 import dk.sdu.mmmi.common.services.IEntityProcessingService;
-import java.io.File;
 //import com.badlogic.gdx.assets.AssetManager;
 
 public class PlayerControlSystem implements IEntityProcessingService {
-
+    
+    private static AttackSystemSPI attackSystem;
+    
     @Override
     public void process(GameData gameData, World world) {
 
@@ -24,12 +24,17 @@ public class PlayerControlSystem implements IEntityProcessingService {
             Movement movement = player.getPart(Movement.class);
             Health health = player.getPart(Health.class);
 
+            //Set keys to true if the key is pressed down.
             movement.setLeft(gameData.getKeys().isDown(GameKeys.LEFT));
             movement.setRight(gameData.getKeys().isDown(GameKeys.RIGHT));
             movement.setUp(gameData.getKeys().isDown(GameKeys.UP));
             movement.setDown(gameData.getKeys().isDown(GameKeys.DOWN));
-            movement.setSpace(gameData.getKeys().isDown(GameKeys.SPACE));
-
+            //movement.setSpace(gameData.getKeys().isDown(GameKeys.SPACE));
+            
+            if(gameData.getKeys().isDown(GameKeys.SPACE)){
+                attackSystem.performAttack(world);
+            }
+            
             /*if (gameData.getKeys().isDown(GameKeys.SPACE)) {
                 Entity bullet = Lookup.getDefault().lookup(BulletSPI.class).createBullet(player, gameData);
                 world.addEntity(bullet);
@@ -67,9 +72,18 @@ public class PlayerControlSystem implements IEntityProcessingService {
         entity.setShapeX(shapex);
         entity.setShapeY(shapey);
         
-        
-        //entity.setImage(new Texture(Gdx.files.internal("bundles/dk.sdu.mmmi.player_1.0.0.SNAPSHOT.jar/assets/Smukkeste.png")));
-        
+        //entity.setImage(new Texture(Gdx.files.internal("bundles/dk.sdu.mmmi.player_1.0.0.SNAPSHOT.jar/assets/Smukkeste.png")); 
     }
+    
+    public void setAttackSystem(AttackSystemSPI attackSystem) {
+        this.attackSystem = attackSystem;
+        //attackSystemList.add(attackSystem);
+    }
+
+    public void removeAttackSystem(AttackSystemSPI attackSystem) {
+        this.attackSystem = null;
+        //attackSystemList.remove(attackSystem);
+    }
+    
 
 }
