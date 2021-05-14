@@ -5,6 +5,7 @@ import dk.sdu.mmmi.common.data.GameData;
 import dk.sdu.mmmi.common.data.World;
 import dk.sdu.mmmi.common.data.entitypart.Combat;
 import dk.sdu.mmmi.common.data.entitypart.Health;
+import dk.sdu.mmmi.common.data.entitypart.Movement;
 import dk.sdu.mmmi.common.data.entitypart.Position;
 import dk.sdu.mmmi.common.services.IPostEntityProcessingService;
 
@@ -58,7 +59,34 @@ public class AttackSystem implements AttackSystemSPI {
         attackerStats = attacker.getPart(Combat.class);
         
         if (distance < (attackerStats.getRange() + victim.getRadius())) {
-            return true;
+            
+            Movement attackerMovement = attacker.getPart(Movement.class);
+            
+            switch(attackerMovement.getLastDirection()){
+                case 'n':
+                    if(victimPos.getY() >= attackerPos.getY()){
+                        return true;
+                    }
+                    break;
+                case 's':
+                    if(victimPos.getY() <= attackerPos.getY()){
+                        return true;
+                    }
+                    break;
+                case 'w':
+                    if(victimPos.getX() <= attackerPos.getX()){
+                        return true;
+                    }
+                    break;
+                case 'e':
+                    if(victimPos.getX() >= attackerPos.getX()){
+                        return true;
+                    }
+                    break;
+                default:
+                    return false; 
+            
+            }
         }
         return false;
     }

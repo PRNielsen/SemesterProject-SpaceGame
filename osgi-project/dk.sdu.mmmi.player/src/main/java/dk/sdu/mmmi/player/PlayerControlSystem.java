@@ -29,8 +29,8 @@ public class PlayerControlSystem implements IEntityProcessingService {
             movement.setRight(gameData.getKeys().isDown(GameKeys.RIGHT));
             movement.setUp(gameData.getKeys().isDown(GameKeys.UP));
             movement.setDown(gameData.getKeys().isDown(GameKeys.DOWN));
-            //movement.setSpace(gameData.getKeys().isDown(GameKeys.SPACE));
-            
+
+            //System.out.println("Last direction: " + movement.getLastDirection());
             if(gameData.getKeys().isDown(GameKeys.SPACE)){
                 attackSystem.performAttack(world);
             }
@@ -39,7 +39,7 @@ public class PlayerControlSystem implements IEntityProcessingService {
                 Entity bullet = Lookup.getDefault().lookup(BulletSPI.class).createBullet(player, gameData);
                 world.addEntity(bullet);
             }*/
-
+            
             movement.process(gameData, player);
             position.process(gameData, player);
             health.process(gameData, player);

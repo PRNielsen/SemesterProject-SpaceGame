@@ -25,6 +25,7 @@ public class Movement
     private float deceleration, acceleration;
     private float maxSpeed, rotationSpeed;
     private boolean left, right, up, down, space;
+    private char lastDirection = 'n';
 
     public Movement(float deceleration, float acceleration, float maxSpeed, float rotationSpeed) {
         this.deceleration = deceleration;
@@ -81,6 +82,14 @@ public class Movement
     public void setSpace(boolean space) {
         this.space = space;
     }
+    
+    public void setLastDirection(char direction){
+        this.lastDirection = direction;
+    }
+    
+    public char getLastDirection(){
+        return this.lastDirection;
+    }
 
     @Override
     public void process(GameData gameData, Entity entity) {
@@ -92,24 +101,26 @@ public class Movement
 
         if (left) {
             this.dx -= acceleration * dt;
-            
+            setLastDirection('w');
+            radians = 3.1f;
         }
 
         if (right) {
             this.dx += acceleration * dt;
-            
+            setLastDirection('e');
+            radians = 0;
         }
              
         if (up) {
-            //dx += cos(radians) * acceleration * dt;
-            //dy += sin(radians) * acceleration * dt;
             dy += acceleration * dt;
-            //dx += acceleration * dt;
+            setLastDirection('n');
+            radians = 1.57f;
         }
         
         if (down) {
             dy -= acceleration * dt;
-            //dx -= acceleration * dt;
+            setLastDirection('s');
+            radians = 4.7f;
         }
         
         if (space) {
