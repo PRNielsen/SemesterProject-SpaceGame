@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-Description: Generated using Pax-Construct
+Bundle-SymbolicName: OSGiRoom
+Built-By: asbjo
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1621083622051
+Bundle-ActivationPolicy: lazy
+Import-Package: dk.sdu.mmmi.common.data,dk.sdu.mmmi.common.data.entity
+ part,dk.sdu.mmmi.room;version="1.0.0.0SNAPSHOT"
+Service-Component: META-INF/entityprocessor.xml,META-INF/gameplugin.xm
+ l
+Tool: Bnd-0.0.255
+Export-Package: dk.sdu.mmmi.room;uses:="dk.sdu.mmmi.common.data.entity
+ part,dk.sdu.mmmi.common.data";version="1.0.0.0SNAPSHOT"
+Bundle-Version: 1.0.0.0SNAPSHOT
+Bundle-Name: Room
+Private-Package: assets
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.8.0_282
+

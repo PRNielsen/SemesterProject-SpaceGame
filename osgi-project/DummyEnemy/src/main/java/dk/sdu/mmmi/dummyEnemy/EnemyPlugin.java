@@ -3,6 +3,7 @@ package dk.sdu.mmmi.dummyEnemy;
 import dk.sdu.mmmi.common.data.Entity;
 import dk.sdu.mmmi.common.data.GameData;
 import dk.sdu.mmmi.common.data.World;
+import dk.sdu.mmmi.common.data.entitypart.Asset;
 import dk.sdu.mmmi.common.data.entitypart.Combat;
 import dk.sdu.mmmi.common.data.entitypart.Health;
 import dk.sdu.mmmi.common.data.entitypart.Movement;
@@ -19,13 +20,16 @@ public class EnemyPlugin implements IGamePluginService {
     @Override
     public void start(GameData gameData, World world) {
         // Add entities to the world
-        Entity enemy = createEnemyShip(gameData);
+        Entity enemy = createEnemy(gameData);
         enemyID = world.addEntity(enemy);
         
     }
 
-    private Entity createEnemyShip(GameData gameData) {
-        Entity enemyShip = new Enemy();
+    private Entity createEnemy(GameData gameData) {
+        Entity enemy = new Enemy();
+        String assetString = "assets/texture.png";
+        String jarName = "DummyEnemy" + "-1.0-SNAPSHOT.jar!";
+        String identifier = "DummyEnemy";
 
         float deacceleration = 10;
         float acceleration = 200;
@@ -37,13 +41,14 @@ public class EnemyPlugin implements IGamePluginService {
         int atkDmg = 1;
         int range = 100;
         
-        enemyShip.add(new Health(3));
-        enemyShip.setRadius(4);
-        enemyShip.add(new Movement(deacceleration, acceleration, maxSpeed, rotationSpeed));
-        enemyShip.add(new Position(x, y, radians));
+        enemy.add(new Health(3));
+        enemy.setRadius(4);
+        enemy.add(new Movement(deacceleration, acceleration, maxSpeed, rotationSpeed));
+        enemy.add(new Position(x, y, radians));
+        enemy.add(new Asset(assetString, jarName, identifier));
         //enemyShip.add(new Combat(atkDmg, range));
         
-        return enemyShip;
+        return enemy;
     }
 
     @Override

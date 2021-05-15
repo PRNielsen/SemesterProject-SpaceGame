@@ -1,6 +1,5 @@
 package dk.sdu.mmmi.player;
 
-//import dk.sdu.mmmi.common.bullet.BulletSPI;
 import dk.sdu.mmmi.attack.AttackSystemSPI;
 import dk.sdu.mmmi.common.data.Entity;
 import dk.sdu.mmmi.common.data.GameData;
@@ -10,7 +9,6 @@ import dk.sdu.mmmi.common.data.entitypart.Health;
 import dk.sdu.mmmi.common.data.entitypart.Movement;
 import dk.sdu.mmmi.common.data.entitypart.Position;
 import dk.sdu.mmmi.common.services.IEntityProcessingService;
-//import com.badlogic.gdx.assets.AssetManager;
 
 public class PlayerControlSystem implements IEntityProcessingService {
     
@@ -50,6 +48,7 @@ public class PlayerControlSystem implements IEntityProcessingService {
     }
 
     private void updateShape(Entity entity) {
+        
         float[] shapex = new float[4];
         float[] shapey = new float[4];
         Position positionPart = entity.getPart(Position.class);
@@ -71,8 +70,7 @@ public class PlayerControlSystem implements IEntityProcessingService {
 
         entity.setShapeX(shapex);
         entity.setShapeY(shapey);
-        
-        //entity.setImage(new Texture(Gdx.files.internal("bundles/dk.sdu.mmmi.player_1.0.0.SNAPSHOT.jar/assets/Smukkeste.png")); 
+
     }
     
     public void setAttackSystem(AttackSystemSPI attackSystem) {
@@ -83,7 +81,6 @@ public class PlayerControlSystem implements IEntityProcessingService {
     public void removeAttackSystem(AttackSystemSPI attackSystem) {
         this.attackSystem = null;
         //attackSystemList.remove(attackSystem);
-    }
-    
+    }    
 
 }

@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Bundle-Description: Generated using Pax-Construct
+Bundle-SymbolicName: Core
+Built-By: asbjo
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1621083611873
+Import-Package: com.badlogic.gdx,com.badlogic.gdx.assets,com.badlogic.
+ gdx.assets.loaders,com.badlogic.gdx.backends.lwjgl,com.badlogic.gdx.f
+ iles,com.badlogic.gdx.graphics,com.badlogic.gdx.graphics.g2d,com.badl
+ ogic.gdx.graphics.glutils,dk.sdu.mmmi.common.data,dk.sdu.mmmi.common.
+ data.entitypart,dk.sdu.mmmi.common.services,dk.sdu.mmmi.core;version=
+ "1.0.0.SNAPSHOT",dk.sdu.mmmi.core.assetloading;version="1.0.0.SNAPSHO
+ T",dk.sdu.mmmi.core.managers;version="1.0.0.SNAPSHOT"
+Service-Component: META-INF/core.xml
+Tool: Bnd-0.0.255
+Export-Package: dk.sdu.mmmi.core;uses:="com.badlogic.gdx.assets.loader
+ s,com.badlogic.gdx.backends.lwjgl,com.badlogic.gdx.graphics.g2d,com.b
+ adlogic.gdx,dk.sdu.mmmi.common.data,com.badlogic.gdx.graphics,com.bad
+ logic.gdx.assets,dk.sdu.mmmi.core.assetloading,dk.sdu.mmmi.core.manag
+ ers,dk.sdu.mmmi.common.data.entitypart,dk.sdu.mmmi.common.services,co
+ m.badlogic.gdx.graphics.glutils";version="1.0.0.SNAPSHOT",dk.sdu.mmmi
+ .core.assetloading;uses:="com.badlogic.gdx.assets.loaders,com.badlogi
+ c.gdx.files";version="1.0.0.SNAPSHOT",dk.sdu.mmmi.core.managers;uses:
+ ="com.badlogic.gdx,dk.sdu.mmmi.common.data";version="1.0.0.SNAPSHOT"
+Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-Name: Core
+Private-Package: dk.sdu.mmmi.core.internal.*
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.8.0_282
+

@@ -55,6 +55,8 @@
     <module>dk.sdu.mmmi.player</module>
     <module>DummyEnemy</module>
     <module>AttackSystem</module>
+    <module>asset</module>
+    <module>dk.sdu.mmmi.room</module>
   </modules>
 
   <build>
