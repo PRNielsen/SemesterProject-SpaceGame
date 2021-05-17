@@ -100,24 +100,36 @@ public class Movement
         float dt = gameData.getDelta();
 
         if (left) {
+            if (dx > 0) {
+                dx = 0;
+            }
             this.dx -= acceleration * dt;
             setLastDirection('w');
             radians = 3.1f;
         }
 
         if (right) {
+            if (dx < 0) {
+                dx = 0;
+            }
             this.dx += acceleration * dt;
             setLastDirection('e');
             radians = 0;
         }
              
         if (up) {
+            if (dy < 0) {
+                dy = 0;
+            }
             dy += acceleration * dt;
             setLastDirection('n');
             radians = 1.57f;
         }
         
         if (down) {
+            if (dy > 0) {
+                dy = 0;
+            }
             dy -= acceleration * dt;
             setLastDirection('s');
             radians = 4.7f;
