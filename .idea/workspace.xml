@@ -12,19 +12,35 @@
   <component name="ChangeListManager">
     <list default="true" id="87569c58-0016-46b8-a3ce-dc74e1e04ffd" name="Default Changelist" comment="Added Player Component + Some Entity parts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osgi-project/Core/src/main/java/dk/sdu/mmmi/core/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/Core/src/main/java/dk/sdu/mmmi/core/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/data/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/data/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/data/GameKeys.java" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/data/GameKeys.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/data/entitypart/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/src/main/java/dk/sdu/mmmi/common/data/entitypart/Movement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.player/src/main/java/dk/sdu/mmmi/player/PlayerControlSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.player/src/main/java/dk/sdu/mmmi/player/PlayerControlSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.player/src/main/java/dk/sdu/mmmi/player/PlayerPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.player/src/main/java/dk/sdu/mmmi/player/PlayerPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/Core/target/Core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/Core/target/Core-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/Core/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/Core/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/target/Common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/target/Common-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.common/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.libgdx/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.libgdx/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.libgdx/target/Libgdx-1.0-SNAPSHOT-001-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.libgdx/target/Libgdx-1.0-SNAPSHOT-001-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.libgdx/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.libgdx/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.player/target/Player-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.player/target/Player-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.player/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.player/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.room/target/Room-1.0SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.room/target/Room-1.0SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.room/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/dk.sdu.mmmi.room/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/osgi-project/runner/bundles/Core_1.0.0.SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/bundles/Core_1.0.0.SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/bundles/OSGiRoom_1.0.0.0SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/bundles/OSGiRoom_1.0.0.0SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/osgi-project/runner/bundles/dk.sdu.mmmi.common_1.0.0.SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/bundles/dk.sdu.mmmi.common_1.0.0.SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/osgi-project/runner/bundles/dk.sdu.mmmi.libgdx_0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/bundles/dk.sdu.mmmi.libgdx_0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/osgi-project/runner/bundles/dk.sdu.mmmi.player_1.0.0.SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/bundles/dk.sdu.mmmi.player_1.0.0.SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/bundles/downloaded_bundles.properties" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/bundles/downloaded_bundles.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/deploy-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/deploy-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle0/bundle.id" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle0/bundle.id" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle1/bundle.info" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle1/bundle.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle10/bundle.info" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle10/bundle.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle10/version0.0/bundle.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle10/version0.0/bundle.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle11/bundle.info" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle11/bundle.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle11/version0.0/bundle.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle11/version0.0/bundle.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle11/version0.0/revision.location" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle11/version0.0/revision.location" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle12/bundle.info" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle12/bundle.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle12/version0.0/bundle.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle12/version0.0/bundle.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle12/version0.0/revision.location" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle12/version0.0/revision.location" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle2/bundle.info" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle2/bundle.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle3/bundle.info" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle3/bundle.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle4/bundle.info" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle4/bundle.info" afterDir="false" />
@@ -37,6 +53,7 @@
       <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle8/version0.0/bundle.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle8/version0.0/bundle.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle9/bundle.info" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle9/bundle.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle9/version0.0/bundle.jar" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/cache/runner/bundle9/version0.0/bundle.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osgi-project/runner/felix/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/osgi-project/runner/felix/config.ini" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +78,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -78,6 +96,12 @@
       <workItem from="1620767888729" duration="123000" />
       <workItem from="1620780569718" duration="1000000" />
       <workItem from="1620786695182" duration="50000" />
+      <workItem from="1621003365972" duration="946000" />
+      <workItem from="1621022471255" duration="2391000" />
+      <workItem from="1621088354964" duration="4245000" />
+      <workItem from="1621105915557" duration="1773000" />
+      <workItem from="1621164929424" duration="2385000" />
+      <workItem from="1621193127579" duration="4200000" />
     </task>
     <task id="LOCAL-00001" summary="Added Player Component + Some Entity parts">
       <created>1620767968906</created>
