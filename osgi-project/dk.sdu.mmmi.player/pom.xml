@@ -58,6 +58,11 @@
       <artifactId>Libgdx</artifactId>
       <version>1.0-SNAPSHOT-001-SNAPSHOT</version>
     </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>AttackSystem</artifactId>
+      <version>${project.version}</version>
+    </dependency>
   </dependencies>
 
 </project>

@@ -53,12 +53,12 @@
     <module>dk.sdu.mmmi.libgdx</module>
     <module>Core</module>
     <module>dk.sdu.mmmi.player</module>
-    <!--    <module>Attack</module>  -->
-    <!--    <module>DummyEnemy</module> -->
+    <module>AttackSystem</module>
     <module>dk.sdu.mmmi.room</module>
     <module>dk.sdu.mmmi.ai</module>
     <module>dk.sdu.mmmi.commonEnemy</module>
     <module>dk.sdu.mmmi.Enemy</module>
+    <module>DummyEnemy</module>
   </modules>
 
   <build>
