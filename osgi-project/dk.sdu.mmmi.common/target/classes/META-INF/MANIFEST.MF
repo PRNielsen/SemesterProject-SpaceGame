@@ -1,21 +1,20 @@
 Manifest-Version: 1.0
-Bundle-Description: Generated using Pax-Construct
-Bundle-SymbolicName: dk.sdu.mmmi.common
-Built-By: asbjo
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1621083609332
-Import-Package: com.badlogic.gdx.graphics,dk.sdu.mmmi.common.data,dk.s
- du.mmmi.common.data.entitypart,dk.sdu.mmmi.common.events,dk.sdu.mmmi.
- common.services
+Created-By: Apache Maven Bundle Plugin
 Tool: Bnd-0.0.255
-Export-Package: dk.sdu.mmmi.common.data.entitypart;uses:="dk.sdu.mmmi.
- common.data",dk.sdu.mmmi.common.services;uses:="dk.sdu.mmmi.common.da
- ta",dk.sdu.mmmi.common.data;uses:="dk.sdu.mmmi.common.data.entitypart
- ,dk.sdu.mmmi.common.events,com.badlogic.gdx.graphics",dk.sdu.mmmi.com
- mon.events;uses:="dk.sdu.mmmi.common.data"
+Bnd-LastModified: 1621266916259
+Export-Package: dk.sdu.mmmi.common.data.entitypart;uses:="dk.sdu.mmmi.co
+ mmon.data",dk.sdu.mmmi.common.services;uses:="dk.sdu.mmmi.common.data",
+ dk.sdu.mmmi.common.data;uses:="dk.sdu.mmmi.common.data.entitypart,dk.sd
+ u.mmmi.common.events",dk.sdu.mmmi.common.events;uses:="dk.sdu.mmmi.comm
+ on.data"
+Import-Package: dk.sdu.mmmi.common.data,dk.sdu.mmmi.common.data.entitypa
+ rt,dk.sdu.mmmi.common.events,dk.sdu.mmmi.common.services
 Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-SymbolicName: dk.sdu.mmmi.common
+Bundle-Description: Generated using Pax-Construct
 Bundle-Name: Common
 Private-Package: dk.sdu.mmmi.common.internal.*
-Created-By: Apache Maven Bundle Plugin
-Build-Jdk: 1.8.0_282
+Built-By: asbjo
+Build-Jdk: 13.0.2
 
