@@ -9,9 +9,8 @@ package dk.sdu.mmmi.room;
 import dk.sdu.mmmi.common.data.GameData;
 import dk.sdu.mmmi.common.data.World;
 import dk.sdu.mmmi.common.data.WorldMap;
-import dk.sdu.mmmi.common.data.entitypart.Position;
+import dk.sdu.mmmi.common.data.worldpart.RoomProperties;
 import dk.sdu.mmmi.common.data.worldpart.WorldMapAsset;
-import dk.sdu.mmmi.common.data.worldpart.WorldPart;
 import dk.sdu.mmmi.common.services.IGamePluginService;
 import java.util.Random;
 
@@ -24,9 +23,11 @@ public class MapPlugin implements IGamePluginService  {
     private WorldMap worldMap;
     Random rand = new Random();
     Room[][] rooms;
+    private Room currentRoom;
     String assetString = "assets/S.png";
     String jarName = "Room" + "-1.0SNAPSHOT.jar!";
-        String identifier = "dk.sdu.mmmi.room";
+    String identifier = "dk.sdu.mmmi.room";
+    RoomProperties prop = new RoomProperties(16,16);
     
     public MapPlugin() {
         
@@ -46,7 +47,10 @@ public class MapPlugin implements IGamePluginService  {
         worldMap = new Map();
         worldMap.add(new WorldMapAsset(assetString, jarName, identifier));
         this.rooms = generateRandomMap();
-        
+        currentRoom = getStartingRoom(rooms);
+        currentRoom.setStartingRoomTiles();
+        prop = copyMapArray();
+        worldMap.add(prop);
         printMap();
         return worldMap;
     }
@@ -72,7 +76,17 @@ public class MapPlugin implements IGamePluginService  {
     private int getDirection() {
         
         return rand.nextInt(10);
-    } 
+    }
+
+    public Room getCurrentRoom() {
+        return currentRoom;
+    }
+
+    public void setCurrentRoom(Room currentRoom) {
+        this.currentRoom = currentRoom;
+    }
+    
+    
     
     private Room[][] generateRandomMap() {
         
@@ -179,6 +193,37 @@ public class MapPlugin implements IGamePluginService  {
             System.out.println();
         }
     }
+    
+    private Room getStartingRoom(Room[][] rooms) {
+        Room returnRoom = this.rooms[0][0];
+        for (int r = 0; r < 7; r++) {
+            for (int c = 0; c < 7; c++) {
+                if (this.rooms[r][c].getRoomType() == RoomType.START) {
+                    return rooms[r][c];
+                }
+            }
+        }
+        return returnRoom;
+    }
+    
+    private RoomProperties copyMapArray() {
+        Tile[][] tiles = currentRoom.getTiles();
+        for (int r = 0; r < 16; r++) {
+            for (int c = 0; c < 16; c++) {
+                Tile tmpTile = new Tile();
+                tmpTile = tiles[r][c];
+                if (tmpTile.isBlocked()) {
+                    prop.setIsBlocked(r, c, true);
+                }
+            }
+        }
+        return prop;
+    }
+    
+//    
+//    private Room setStartingRoom() {
+//        
+//    }
 }
 
 

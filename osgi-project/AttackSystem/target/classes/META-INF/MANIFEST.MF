@@ -1,23 +1,19 @@
 Manifest-Version: 1.0
+Bundle-Description: Generated using Pax-Construct
+Bundle-SymbolicName: Attack
+Built-By: asbjo
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1621264046971
+Bnd-LastModified: 1621294236465
 Bundle-ActivationPolicy: lazy
 Import-Package: dk.sdu.mmmi.attack;version="1.0.0.SNAPSHOT",dk.sdu.mmm
  i.common.data,dk.sdu.mmmi.common.data.entitypart
 Service-Component: META-INF/attacksystem.xml
 Tool: Bnd-0.0.255
-Bnd-LastModified: 1621266900664
-Export-Package: dk.sdu.mmmi.attack;uses:="dk.sdu.mmmi.common.data.entity
- part,dk.sdu.mmmi.common.data";version="1.0.0.SNAPSHOT"
-Import-Package: dk.sdu.mmmi.attack;version="1.0.0.SNAPSHOT",dk.sdu.mmmi.
- common.data,dk.sdu.mmmi.common.data.entitypart
-Service-Component: META-INF/attacksystem.xml
+Export-Package: dk.sdu.mmmi.attack;uses:="dk.sdu.mmmi.common.data.enti
+ typart,dk.sdu.mmmi.common.data";version="1.0.0.SNAPSHOT"
 Bundle-Version: 1.0.0.SNAPSHOT
-Bundle-ActivationPolicy: lazy
-Bundle-SymbolicName: Attack
-Bundle-Description: Generated using Pax-Construct
 Bundle-Name: AttackSystem
 Private-Package: dk.sdu.mmmi.attack.internal.*
-Built-By: asbjo
-Build-Jdk: 13.0.2
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.8.0_282
 

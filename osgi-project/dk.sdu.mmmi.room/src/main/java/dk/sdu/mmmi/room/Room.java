@@ -1,5 +1,8 @@
 package dk.sdu.mmmi.room;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  *
  * @author asbjo
@@ -11,18 +14,18 @@ public class Room {
     private boolean north = false;
     private boolean east = false;
     private boolean south = false;
+    private Tile[][] tiles;
 
-    public Room (RoomType roomType) { this.roomType = roomType; }
+    public Room (RoomType roomType) { 
+        this.roomType = roomType; 
+        this.tiles = new Tile[16][16];
+    }
     
-    // remove need for abstract!
-    //public TileType getTileTypeByLocation(int layer, float x, float y) {
-    //    return this.getTileTypeByCoordinates(layer, (int) (x / TileType.SIZE), (int) (y / TileType.SIZE));
-    //}
-    
-     
-    //public abstract TileType getTileTypeByCoordinates(int layer, int col, int row);
-
-
+    public Tile getTile(int posX, int posY){
+        // insert pixel dimensions, return tiles;
+      return tiles[posX][posY];
+    } 
+   
     public RoomType getRoomType() {
         return roomType;
     }
@@ -47,6 +50,70 @@ public class Room {
 
     public boolean isNorth() {
         return north;
+    }
+
+    public Tile[][] getTiles() {
+        return tiles;
+    }
+    
+    
+    
+    // Temprorary method for initail room generation
+    public void setStartingRoomTiles() {
+        for (int r = 0; r < 16; r++) {
+            for (int c = 0; c < 16; c++) {
+                if (r <= 1) {
+                    Tile tmpTile = new Tile();
+                    tmpTile.setBlocked(true);
+                    this.tiles[r][c] = tmpTile;
+                } else if (r == 15) {
+                    Tile tmpTile = new Tile();
+                    tmpTile.setBlocked(true);
+                    this.tiles[r][c] = tmpTile;
+                } else if (6 < r && r < 10 ) {
+                    Tile tmpTile = new Tile();
+                    tmpTile.setBlocked(true);
+                    this.tiles[r][c] = tmpTile;
+                } else if (c == 0) {
+                    Tile tmpTile = new Tile();
+                    tmpTile.setBlocked(true);
+                    this.tiles[r][c] = tmpTile;
+                } else if (c == 15) {
+                    Tile tmpTile = new Tile();
+                    tmpTile.setBlocked(true);
+                    this.tiles[r][c] = tmpTile;
+                } else {
+                    Tile tmpTile = new Tile();
+                    tmpTile.setBlocked(false);
+                    this.tiles[r][c] = tmpTile;
+                }
+
+            }
+        }
+        for (int r = 0; r < 16; r++) {
+            for (int c = 0; c < 16; c++) {
+                if (r > 6 && r < 10) {
+                    if (c == 4 || c == 11) {
+                        Tile tmpTile = new Tile();
+                        tmpTile.setBlocked(false);
+                        this.tiles[r][c] = tmpTile;
+                    }
+                }
+            }
+        }
+        // Printing algorithm 
+        System.out.println("------  Room Tiles -------");
+        for (Tile[] row : this.tiles) {
+            for (Tile field : row) {
+                if (field.isBlocked()) {
+                    System.out.print(" B ");
+                } else {
+                    System.out.print(" W ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println("---------------------------");
     }
 
     public void setNorth(boolean north) {

@@ -10,7 +10,7 @@ import dk.sdu.mmmi.common.data.entitypart.Position;
 import dk.sdu.mmmi.common.services.IPostEntityProcessingService;
 
 public class AttackSystem implements AttackSystemSPI {
-     Combat attackerStats;
+    Combat attackerStats;
     
     
     @Override

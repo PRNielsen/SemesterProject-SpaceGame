@@ -1,6 +1,9 @@
 Manifest-Version: 1.0
+Bundle-Description: Generated using Pax-Construct
+Bundle-SymbolicName: OSGiRoom
+Built-By: asbjo
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1621264053548
+Bnd-LastModified: 1621294245821
 Bundle-ActivationPolicy: lazy
 Import-Package: dk.sdu.mmmi.common.data,dk.sdu.mmmi.common.data.worldp
  art,dk.sdu.mmmi.common.services,dk.sdu.mmmi.room;version="1.0.0.0SNAP
@@ -12,10 +15,8 @@ Export-Package: dk.sdu.mmmi.room;uses:="dk.sdu.mmmi.common.services,dk
  .sdu.mmmi.common.data,dk.sdu.mmmi.common.data.worldpart";version="1.0
  .0.0SNAPSHOT"
 Bundle-Version: 1.0.0.0SNAPSHOT
-Bundle-ActivationPolicy: lazy
-Bundle-SymbolicName: OSGiRoom
-Bundle-Description: Generated using Pax-Construct
 Bundle-Name: Room
-Built-By: asbjo
-Build-Jdk: 13.0.2
+Private-Package: assets
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.8.0_282
 

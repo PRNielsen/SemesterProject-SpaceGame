@@ -21,6 +21,7 @@ import dk.sdu.mmmi.common.data.World;
 import dk.sdu.mmmi.common.data.WorldMap;
 import dk.sdu.mmmi.common.data.entitypart.Position;
 import dk.sdu.mmmi.common.data.entitypart.Asset;
+import dk.sdu.mmmi.common.data.worldpart.RoomProperties;
 import dk.sdu.mmmi.common.data.worldpart.WorldMapAsset;
 import dk.sdu.mmmi.common.services.IEntityProcessingService;
 import dk.sdu.mmmi.common.services.IGamePluginService;
@@ -67,8 +68,8 @@ public class Game implements ApplicationListener {
     public void init() {
         LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
         cfg.title = "Required-< <>-Interfaces";
-        cfg.width = 900;
-        cfg.height = 900;
+        cfg.width = 800;
+        cfg.height = 800;
         cfg.useGL30 = false;
         cfg.resizable = false;
 
@@ -110,7 +111,6 @@ public class Game implements ApplicationListener {
             am.load(assetPath, Texture.class);
             am.finishLoading();
             backgroundTex = am.get(assetPath, Texture.class);
-
         }
         /// --------------------------------------------------
         mapRenderer = new OrthogonalTiledMapRenderer(tiledMap);
@@ -206,6 +206,8 @@ public class Game implements ApplicationListener {
             entityClass = entity.getClass().toString();
             sprite = spriteMap.get(entityClass);
             sprite.setOrigin(x, y);
+            sprite.setCenter(x, y);
+            
             
             batch.begin();
             batch.draw(sprite, x, y);

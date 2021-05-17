@@ -6,12 +6,12 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
-
 /**
  *
  * @author asbjo
  */
 public class WorldMap implements Serializable {
+    
     private final UUID ID = UUID.randomUUID();
     
     private Map<Class, WorldPart> parts;
