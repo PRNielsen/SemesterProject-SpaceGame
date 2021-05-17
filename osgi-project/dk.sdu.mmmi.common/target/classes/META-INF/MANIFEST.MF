@@ -1,15 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Created-By: Apache Maven Bundle Plugin
+Bnd-LastModified: 1621264041694
+Import-Package: dk.sdu.mmmi.common.data,dk.sdu.mmmi.common.data.entity
+ part,dk.sdu.mmmi.common.data.worldpart,dk.sdu.mmmi.common.events,dk.s
+ du.mmmi.common.services
 Tool: Bnd-0.0.255
-Bnd-LastModified: 1621266916259
-Export-Package: dk.sdu.mmmi.common.data.entitypart;uses:="dk.sdu.mmmi.co
- mmon.data",dk.sdu.mmmi.common.services;uses:="dk.sdu.mmmi.common.data",
- dk.sdu.mmmi.common.data;uses:="dk.sdu.mmmi.common.data.entitypart,dk.sd
- u.mmmi.common.events",dk.sdu.mmmi.common.events;uses:="dk.sdu.mmmi.comm
- on.data"
-Import-Package: dk.sdu.mmmi.common.data,dk.sdu.mmmi.common.data.entitypa
- rt,dk.sdu.mmmi.common.events,dk.sdu.mmmi.common.services
+Export-Package: dk.sdu.mmmi.common.data.entitypart;uses:="dk.sdu.mmmi.
+ common.data",dk.sdu.mmmi.common.services;uses:="dk.sdu.mmmi.common.da
+ ta",dk.sdu.mmmi.common.data;uses:="dk.sdu.mmmi.common.data.entitypart
+ ,dk.sdu.mmmi.common.events,dk.sdu.mmmi.common.data.worldpart",dk.sdu.
+ mmmi.common.data.worldpart;uses:="dk.sdu.mmmi.common.data",dk.sdu.mmm
+ i.common.events;uses:="dk.sdu.mmmi.common.data"
 Bundle-Version: 1.0.0.SNAPSHOT
 Bundle-SymbolicName: dk.sdu.mmmi.common
 Bundle-Description: Generated using Pax-Construct

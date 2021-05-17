@@ -6,10 +6,12 @@
 package dk.sdu.mmmi.room;
 
 
-import dk.sdu.mmmi.common.data.Entity;
 import dk.sdu.mmmi.common.data.GameData;
 import dk.sdu.mmmi.common.data.World;
+import dk.sdu.mmmi.common.data.WorldMap;
 import dk.sdu.mmmi.common.data.entitypart.Position;
+import dk.sdu.mmmi.common.data.worldpart.WorldMapAsset;
+import dk.sdu.mmmi.common.data.worldpart.WorldPart;
 import dk.sdu.mmmi.common.services.IGamePluginService;
 import java.util.Random;
 
@@ -17,10 +19,14 @@ import java.util.Random;
  *
  * @author asbjo
  */
-public class MapPlugin /* implements IGamePluginService */ {
-    private Entity worldMap;
+public class MapPlugin implements IGamePluginService  {
+    
+    private WorldMap worldMap;
     Random rand = new Random();
     Room[][] rooms;
+    String assetString = "assets/S.png";
+    String jarName = "Room" + "-1.0SNAPSHOT.jar!";
+        String identifier = "dk.sdu.mmmi.room";
     
     public MapPlugin() {
         
@@ -30,18 +36,15 @@ public class MapPlugin /* implements IGamePluginService */ {
     public void start(GameData gameData, World world) {
         
         worldMap = createWorldMap(gameData);
-        world.addEntity(worldMap);
+        world.addWorldMap(worldMap);
     }
 
     
     
-    private Entity createWorldMap(GameData gameData) {
+    private WorldMap createWorldMap(GameData gameData) {
         
-        float x = 600;
-        float y = 400;
-        float radians = 3.1415f / 2;
         worldMap = new Map();
-        worldMap.add(new Position(x, y, radians));
+        worldMap.add(new WorldMapAsset(assetString, jarName, identifier));
         this.rooms = generateRandomMap();
         
         printMap();
@@ -51,7 +54,19 @@ public class MapPlugin /* implements IGamePluginService */ {
    // @Override
     public void stop(GameData gameData, World world) {
         
-        world.removeEntity(worldMap);
+        world.removeWorldMap(worldMap);
+    }
+    
+    public String getAssetString() {
+        return assetString;
+    }
+    
+    public String getJarName() {
+        return jarName;
+    }
+    
+    public String getID() {
+        return identifier;
     }
     
     private int getDirection() {
@@ -70,7 +85,7 @@ public class MapPlugin /* implements IGamePluginService */ {
         rooms = new Room[width][height];
         roomDensity = (int) Math.round((width * height) * 0.4);
         
-
+        
         // Chose random index in top row and set it as start
         boolean finished = false;
         int currentY;

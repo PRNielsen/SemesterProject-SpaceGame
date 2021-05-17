@@ -2,7 +2,6 @@ package dk.sdu.mmmi.common.data;
 
 import dk.sdu.mmmi.common.data.entitypart.EntityPart;
 import java.io.Serializable;
-import java.util.Collection;
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;

@@ -1,6 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Created-By: Apache Maven Bundle Plugin
+Bnd-LastModified: 1621264046971
+Bundle-ActivationPolicy: lazy
+Import-Package: dk.sdu.mmmi.attack;version="1.0.0.SNAPSHOT",dk.sdu.mmm
+ i.common.data,dk.sdu.mmmi.common.data.entitypart
+Service-Component: META-INF/attacksystem.xml
 Tool: Bnd-0.0.255
 Bnd-LastModified: 1621266900664
 Export-Package: dk.sdu.mmmi.attack;uses:="dk.sdu.mmmi.common.data.entity

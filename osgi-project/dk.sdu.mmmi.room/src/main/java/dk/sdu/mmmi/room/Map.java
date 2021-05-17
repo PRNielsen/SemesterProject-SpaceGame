@@ -1,28 +1,11 @@
 package dk.sdu.mmmi.room;
 
-import dk.sdu.mmmi.common.data.Entity;
-import java.util.Random;
+import dk.sdu.mmmi.common.data.WorldMap;
 
 /**
  *
  * @author asbjo
  */
-public class Map extends Entity {
+public class Map extends WorldMap {
     
-//    private final int height;
-//    private final int width;
-//    private int roomDensity;
-//    
-//    private Room currentRoom;
-//    
-//
-//
-//    public Map(int width, int height) {
-//        this.width = width;
-//        this.height = height;
-//        
-//        setMapSize(width, height);
-//        // generateEmptyMap();
-//        generateRandomMap();
-//    }
 }    

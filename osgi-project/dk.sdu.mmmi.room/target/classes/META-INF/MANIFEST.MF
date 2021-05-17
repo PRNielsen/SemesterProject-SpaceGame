@@ -1,14 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Created-By: Apache Maven Bundle Plugin
+Bnd-LastModified: 1621264053548
+Bundle-ActivationPolicy: lazy
+Import-Package: dk.sdu.mmmi.common.data,dk.sdu.mmmi.common.data.worldp
+ art,dk.sdu.mmmi.common.services,dk.sdu.mmmi.room;version="1.0.0.0SNAP
+ SHOT"
+Service-Component: META-INF/worldmapprocessor.xml,META-INF/gameplugin.
+ xml
 Tool: Bnd-0.0.255
-Bnd-LastModified: 1621266957329
-Export-Package: dk.sdu.mmmi.room;uses:="dk.sdu.mmmi.common.data.entitypa
- rt,dk.sdu.mmmi.common.data";version="1.0.0.0SNAPSHOT"
-Import-Package: dk.sdu.mmmi.common.data,dk.sdu.mmmi.common.data.entitypa
- rt,dk.sdu.mmmi.room;version="1.0.0.0SNAPSHOT"
-Private-Package: assets
-Service-Component: META-INF/entityprocessor.xml,META-INF/gameplugin.xml
+Export-Package: dk.sdu.mmmi.room;uses:="dk.sdu.mmmi.common.services,dk
+ .sdu.mmmi.common.data,dk.sdu.mmmi.common.data.worldpart";version="1.0
+ .0.0SNAPSHOT"
 Bundle-Version: 1.0.0.0SNAPSHOT
 Bundle-ActivationPolicy: lazy
 Bundle-SymbolicName: OSGiRoom

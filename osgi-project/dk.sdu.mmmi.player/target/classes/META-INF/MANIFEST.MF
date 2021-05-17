@@ -1,6 +1,12 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Created-By: Apache Maven Bundle Plugin
+Bnd-LastModified: 1621264049317
+Bundle-ActivationPolicy: lazy
+Import-Package: dk.sdu.mmmi.attack;version="1.0.0.SNAPSHOT",dk.sdu.mmm
+ i.common.data,dk.sdu.mmmi.common.data.entitypart,dk.sdu.mmmi.common.s
+ ervices,dk.sdu.mmmi.player;version="1.0.0.SNAPSHOT"
+Service-Component: META-INF/entityprocessor.xml,META-INF/gameplugin.xm
+ l
 Tool: Bnd-0.0.255
 Bnd-LastModified: 1621266946280
 Export-Package: dk.sdu.mmmi.player;uses:="dk.sdu.mmmi.common.data.entity

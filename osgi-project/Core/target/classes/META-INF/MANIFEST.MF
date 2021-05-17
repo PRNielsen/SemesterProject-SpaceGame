@@ -2,23 +2,27 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Created-By: Apache Maven Bundle Plugin
 Tool: Bnd-0.0.255
-Bnd-LastModified: 1621266930381
+Bnd-LastModified: 1621266285661
 Export-Package: dk.sdu.mmmi.core;uses:="com.badlogic.gdx.assets.loaders,
- com.badlogic.gdx.backends.lwjgl,com.badlogic.gdx.graphics.g2d,com.badlo
- gic.gdx,dk.sdu.mmmi.common.data,com.badlogic.gdx.graphics,com.badlogic.
- gdx.assets,dk.sdu.mmmi.core.assetloading,dk.sdu.mmmi.core.managers,dk.s
- du.mmmi.common.data.entitypart,dk.sdu.mmmi.common.services,com.badlogic
- .gdx.graphics.glutils";version="1.0.0.SNAPSHOT",dk.sdu.mmmi.core.assetl
- oading;uses:="com.badlogic.gdx.assets.loaders,com.badlogic.gdx.files";v
- ersion="1.0.0.SNAPSHOT",dk.sdu.mmmi.core.managers;uses:="com.badlogic.g
- dx,dk.sdu.mmmi.common.data";version="1.0.0.SNAPSHOT"
+ com.badlogic.gdx.maps.tiled.renderers,com.badlogic.gdx.backends.lwjgl,c
+ om.badlogic.gdx.graphics.g2d,com.badlogic.gdx,dk.sdu.mmmi.common.data,c
+ om.badlogic.gdx.graphics,com.badlogic.gdx.assets,dk.sdu.mmmi.core.asset
+ loading,com.badlogic.gdx.maps.tiled,com.badlogic.gdx.utils.viewport,dk.
+ sdu.mmmi.core.managers,dk.sdu.mmmi.common.data.entitypart,dk.sdu.mmmi.c
+ ommon.services,com.badlogic.gdx.math,dk.sdu.mmmi.common.data.worldpart,
+ com.badlogic.gdx.graphics.glutils";version="1.0.0.SNAPSHOT",dk.sdu.mmmi
+ .core.assetloading;uses:="com.badlogic.gdx.assets.loaders,com.badlogic.
+ gdx.files";version="1.0.0.SNAPSHOT",dk.sdu.mmmi.core.managers;uses:="co
+ m.badlogic.gdx,dk.sdu.mmmi.common.data";version="1.0.0.SNAPSHOT"
 Import-Package: com.badlogic.gdx,com.badlogic.gdx.assets,com.badlogic.gd
  x.assets.loaders,com.badlogic.gdx.backends.lwjgl,com.badlogic.gdx.files
  ,com.badlogic.gdx.graphics,com.badlogic.gdx.graphics.g2d,com.badlogic.g
- dx.graphics.glutils,dk.sdu.mmmi.common.data,dk.sdu.mmmi.common.data.ent
- itypart,dk.sdu.mmmi.common.services,dk.sdu.mmmi.core;version="1.0.0.SNA
- PSHOT",dk.sdu.mmmi.core.assetloading;version="1.0.0.SNAPSHOT",dk.sdu.mm
- mi.core.managers;version="1.0.0.SNAPSHOT"
+ dx.graphics.glutils,com.badlogic.gdx.maps.tiled,com.badlogic.gdx.maps.t
+ iled.renderers,com.badlogic.gdx.math,com.badlogic.gdx.utils.viewport,dk
+ .sdu.mmmi.common.data,dk.sdu.mmmi.common.data.entitypart,dk.sdu.mmmi.co
+ mmon.data.worldpart,dk.sdu.mmmi.common.services,dk.sdu.mmmi.core;versio
+ n="1.0.0.SNAPSHOT",dk.sdu.mmmi.core.assetloading;version="1.0.0.SNAPSHO
+ T",dk.sdu.mmmi.core.managers;version="1.0.0.SNAPSHOT"
 Service-Component: META-INF/core.xml
 Bundle-Version: 1.0.0.SNAPSHOT
 Bundle-SymbolicName: Core
