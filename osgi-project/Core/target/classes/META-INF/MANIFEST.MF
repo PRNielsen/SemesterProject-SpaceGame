@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: Core
-Built-By: asbjo
+Built-By: Daniel Tran
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1621294233408
+Bnd-LastModified: 1621348671760
 Import-Package: com.badlogic.gdx,com.badlogic.gdx.assets,com.badlogic.
  gdx.assets.loaders,com.badlogic.gdx.backends.lwjgl,com.badlogic.gdx.f
  iles,com.badlogic.gdx.graphics,com.badlogic.gdx.graphics.g2d,com.badl
@@ -31,5 +31,5 @@ Bundle-Version: 1.0.0.SNAPSHOT
 Bundle-Name: Core
 Private-Package: dk.sdu.mmmi.core.internal.*
 Created-By: Apache Maven Bundle Plugin
-Build-Jdk: 1.8.0_282
+Build-Jdk: 1.8.0_281
 

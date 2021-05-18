@@ -57,6 +57,7 @@
     <module>AttackSystem</module>
     <module>asset</module>
     <module>dk.sdu.mmmi.room</module>
+    <module>Collision</module>
   </modules>
 
   <build>
