@@ -16,9 +16,10 @@ import dk.sdu.mmmi.player.Player;
 
 public class EnemyProcessor implements IEntityProcessingService {
     Entity enemy;
+    Entity player;
+    Position targetPosition;
     float x;
     float y;
-    
     boolean left;
     boolean right;
     boolean up;
@@ -30,53 +31,48 @@ public class EnemyProcessor implements IEntityProcessingService {
 
         for (Entity i : world.getEntities(Enemy.class)) {
             enemy = i;
-            
+                
             Position enemyPosition = enemy.getPart(Position.class);
             Movement enemyMovement = enemy.getPart(Movement.class);
-            
-            Entity player = world.getEntities(Player.class).get(0);
-            Position targetPosition = player.getPart(Position.class);
-            
+            if (!world.getEntities(Player.class).isEmpty()) {
+                player = (Player) world.getEntities(Player.class).get(0);
+                targetPosition = player.getPart(Position.class);
+            }
+         
             x = enemyPosition.getX();
             y = enemyPosition.getY();
             
             float playerX = targetPosition.getX();
             float playerY = targetPosition.getY();
             
+  
             float dist = distanceCalculator(x, y, playerX, playerY);
-            if (dist > 40){
-                if(x > playerX){
+            if (dist > 40) {
+                if (x > playerX) {
                     left = true;
                     right = false;
                 }
-                if(x < playerX){
+                if (x < playerX) {
                     right = true;
                     left = false;
                 }
-                if(y > playerY){
+                if (y > playerY) {
                     down = true;
                     up = false;
                 }
-                if(y < playerY){
+                if (y < playerY) {
                     up = true;
                     down = false;
                 }
             }
-//            System.out.println(dist);
-//            System.out.println("Left : " + left);
-//            System.out.println("Right : " +right);
-//            System.out.println("Up : " + up);
-//            System.out.println("Down : " + down);
             
             enemyMovement.setLeft(left);
             enemyMovement.setRight(right);
             enemyMovement.setDown(down);
             enemyMovement.setUp(up);
-            
+
             enemyMovement.process(gameData, enemy);
             enemyPosition.process(gameData, enemy);
-            updateShape(enemy);
-
         }
     }
 

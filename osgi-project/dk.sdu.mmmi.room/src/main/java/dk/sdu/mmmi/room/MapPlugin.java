@@ -125,7 +125,6 @@ public class MapPlugin implements IGamePluginService  {
                     rooms[currentY][currentX].setSouth(true);
                     rooms[currentY + 1][currentX].setNorth(true);
                     counter++;
-                    System.out.println("UP");
                 }
 
             }
@@ -137,7 +136,6 @@ public class MapPlugin implements IGamePluginService  {
                     rooms[currentY][currentX].setEast(true);
                     rooms[currentY][currentX + 1].setWest(true);
                     counter++;
-                    System.out.println("LEFT");
                 }
             }
             else if (direction >= 4 && direction <= 5 && currentX != width - 1) {
@@ -148,7 +146,6 @@ public class MapPlugin implements IGamePluginService  {
                     rooms[currentY][currentX].setWest(true);
                     rooms[currentY][currentX - 1].setEast(true);
                     counter++;
-                    System.out.println("RIGHT");
                 }
             }
             else if (direction >= 6 && direction <= 9 && currentY != height - 1) {
@@ -159,7 +156,6 @@ public class MapPlugin implements IGamePluginService  {
                     rooms[currentY][currentX].setNorth(true);
                     rooms[currentY - 1][currentX].setSouth(true);
                     counter++;
-                    System.out.println("DOWN");
                 }
             }
 

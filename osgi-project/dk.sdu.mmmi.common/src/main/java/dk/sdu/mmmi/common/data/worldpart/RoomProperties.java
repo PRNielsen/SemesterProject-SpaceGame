@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dk.sdu.mmmi.common.data.worldpart;
 
 import dk.sdu.mmmi.common.data.GameData;
@@ -37,20 +32,29 @@ public class RoomProperties implements WorldPart {
         return this.tiles;
     }
     
-    // Takes pixel coordinates
+    // Takes pixel coordinates and returns tile of that position
     public boolean getTile(float posX, float posY) {
-        if(posX <= 800 && posY <= 800) {
-            int r = (int) posX / 50;
-            if(r == 16){
+        if(posX < 800 && posY < 800) {
+            int r = 15 - (((int) posY / 50));
+            if(r > 15){
                 r = 15;
             }
-            int c = 15 -((int) posY / 50);
+            int c = (int) posX / 50;
             if(c < 0){
                 c = 0;
             }
-            return tiles[r][c];
+            if (r >=0 && r < 16 && c >=0 && c < 16 ) {
+                return tiles[r][c];
+            } else {
+                return tiles[0][0];
+            }
         } 
         return tiles[0][0];
+    }
+    
+    // Takes tile coordinates and returns tile
+    public boolean getTile(int row, int column) {
+        return tiles[row][column];
     }
     
     // Takes indexes of row and column and outputs array defining area:

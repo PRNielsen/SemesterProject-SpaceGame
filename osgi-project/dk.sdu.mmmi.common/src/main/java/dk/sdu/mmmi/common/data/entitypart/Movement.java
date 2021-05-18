@@ -7,23 +7,17 @@ package dk.sdu.mmmi.common.data.entitypart;
 
 import dk.sdu.mmmi.common.data.Entity;
 import dk.sdu.mmmi.common.data.GameData;
-import static dk.sdu.mmmi.common.data.GameKeys.LEFT;
-import static dk.sdu.mmmi.common.data.GameKeys.RIGHT;
-import static dk.sdu.mmmi.common.data.GameKeys.UP;
-import static java.lang.Math.cos;
-import static java.lang.Math.sin;
 import static java.lang.Math.sqrt;
 
 /**
  *
  * @author Alexander
  */
-public class Movement
-        implements EntityPart {
+public class Movement implements EntityPart {
 
     private float dx, dy;
     private float deceleration, acceleration;
-    private float maxSpeed, rotationSpeed;
+    private float maxSpeed;
     private boolean left, right, up, down, space;
     private char lastDirection = 'n';
 
@@ -31,7 +25,6 @@ public class Movement
         this.deceleration = deceleration;
         this.acceleration = acceleration;
         this.maxSpeed = maxSpeed;
-        this.rotationSpeed = rotationSpeed;
     }
 
     public float getDx() {
@@ -58,9 +51,25 @@ public class Movement
         this.acceleration = speed;
         this.maxSpeed = speed;
     }
-
-    public void setRotationSpeed(float rotationSpeed) {
-        this.rotationSpeed = rotationSpeed;
+    
+    public void setCollision() {
+        if (getLastDirection() == 'w') {
+            dx = 240;
+            this.setLeft(false);
+            
+        }
+        if (getLastDirection() == 'e') {
+            dx = -240;
+            this.setRight(false);
+        }
+        if (getLastDirection() == 'n') {
+            dy = -240;
+            this.setUp(false);
+        }
+        if (getLastDirection() == 's') {
+            dy = 240;
+            this.setDown(false);
+        }
     }
 
     public void setLeft(boolean left) {
@@ -96,8 +105,10 @@ public class Movement
         Position positionPart = entity.getPart(Position.class);
         float x = positionPart.getX();
         float y = positionPart.getY();
-        float radians = positionPart.getRadians();
         float dt = gameData.getDelta();
+
+//        float radians = positionPart.getRadians();
+        
 
         if (left) {
             if (dx > 0) {
@@ -106,7 +117,7 @@ public class Movement
             }
             this.dx -=  acceleration * dt;
             setLastDirection('w');
-            radians = 3.1f;
+//            radians = 3.1f;
         }
 
         if (right) {
@@ -116,7 +127,7 @@ public class Movement
             }
             this.dx += acceleration * dt;
             setLastDirection('e');
-            radians = 0;
+//            radians = 0;
         }
              
         if (up) {
@@ -126,7 +137,7 @@ public class Movement
             }
             dy +=  acceleration * dt;
             setLastDirection('n');
-            radians = 1.57f;
+//            radians = 1.57f;
         }
         
         if (down) {
@@ -136,7 +147,7 @@ public class Movement
             }
             dy -=  acceleration * dt;
             setLastDirection('s');
-            radians = 4.7f;
+//            radians = 4.7f;
         }
         
         if (space) {
@@ -161,23 +172,13 @@ public class Movement
         }
 
         // set position
-        x += this.dx * dt;
-//        if (x > gameData.getDisplayWidth()) {
-//            x = 0;
-//        } else if (x < 0) {
-//            x = gameData.getDisplayWidth();
-//        }
+        x += dx * dt;
 
         y += dy * dt;
-//        if (y > gameData.getDisplayHeight()) {
-//            y = 0;
-//        } else if (y < 0) {
-//            y = gameData.getDisplayHeight();
-//        }
+
 
         positionPart.setX(x);
         positionPart.setY(y);
 
-        positionPart.setRadians(radians);
     }
 }

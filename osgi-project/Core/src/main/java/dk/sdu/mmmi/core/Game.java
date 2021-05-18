@@ -21,7 +21,6 @@ import dk.sdu.mmmi.common.data.World;
 import dk.sdu.mmmi.common.data.WorldMap;
 import dk.sdu.mmmi.common.data.entitypart.Position;
 import dk.sdu.mmmi.common.data.entitypart.Asset;
-import dk.sdu.mmmi.common.data.worldpart.RoomProperties;
 import dk.sdu.mmmi.common.data.worldpart.WorldMapAsset;
 import dk.sdu.mmmi.common.services.IEntityProcessingService;
 import dk.sdu.mmmi.common.services.IGamePluginService;
@@ -84,10 +83,7 @@ public class Game implements ApplicationListener {
 
         
         cam = new OrthographicCamera();
-        viewport = new FitViewport(256, 256, cam);
-        //viewport = new FitViewport(gameData.getDisplayWidth(), gameData.getDisplayHeight(), cam);
-        // map is 256 x 256 pixels
-        
+        viewport = new FitViewport(256, 256, cam);   
         cam.update();
 
         sr = new ShapeRenderer();
@@ -112,14 +108,11 @@ public class Game implements ApplicationListener {
             am.finishLoading();
             backgroundTex = am.get(assetPath, Texture.class);
         }
-        /// --------------------------------------------------
+
         mapRenderer = new OrthogonalTiledMapRenderer(tiledMap);
         cam.position.set(viewport.getWorldWidth() / 2, viewport.getWorldHeight() / 2, 0);
-        // ---------------------------------------------------
       
         // Entity rendering assets loaded into GameEngine
-        
-        
         for (Entity entity : world.getEntities()) {
             entityClass = entity.getClass().toString();
             if (!spriteMap.containsKey(entityClass)) {
@@ -138,7 +131,6 @@ public class Game implements ApplicationListener {
                 spriteMap.put(entityClass, sprite);
             }                   
         }
-        
         
         Gdx.input.setInputProcessor(new GameInputProcessor(gameData));
         
@@ -180,28 +172,10 @@ public class Game implements ApplicationListener {
         batch.draw(backgroundTex, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());   
         batch.end();
         for (Entity entity : world.getEntities()) {
-    
-//            sr.setColor(1, 1, 1, 1);
-//
-//            sr.begin(ShapeRenderer.ShapeType.Line);
-//
-//            float[] shapex = entity.getShapeX();
-//            float[] shapey = entity.getShapeY();
-//
-//            for (int i = 0, j = shapex.length - 1;
-//                    i < shapex.length;
-//                    j = i++) {
-//
-//                sr.line(shapex[i], shapey[i], shapex[j], shapey[j]);
-//            }
-//            sr.end();
-//            sr.begin(ShapeRenderer.ShapeType.Line);
-//            sr.setColor(0, 1, 0, 1);
+
             Position positionPart = entity.getPart(Position.class);
             float x = positionPart.getX();
             float y = positionPart.getY();
-//            sr.circle(x, y, 50);
-//            sr.end();
             
             cam.update();
             mapRenderer.setView(cam);

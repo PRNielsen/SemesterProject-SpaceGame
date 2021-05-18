@@ -21,7 +21,7 @@ public class Position implements EntityPart {
     public Position(float x, float y, float radians) {
         this.x = x;
         this.y = y;
-        this.radians = radians;
+        //this.radians = radians;
     }
 
     public float getX() {
@@ -49,9 +49,9 @@ public class Position implements EntityPart {
         this.y = newY;
     }
 
-    public void setRadians(float radians) {
-        this.radians = radians;
-    }
+//    public void setRadians(float radians) {
+//        this.radians = radians;
+//    }
 
     @Override
     public void process(GameData gameData, Entity entity) {

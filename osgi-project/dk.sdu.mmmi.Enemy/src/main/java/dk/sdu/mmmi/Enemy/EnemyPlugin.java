@@ -20,7 +20,7 @@ public class EnemyPlugin implements IGamePluginService {
     private String enemyID;
     Entity enemy1;
     Entity enemy2;
-    Entity enemy3;
+//    Entity enemy3;
     Random rand = new Random();
 
     public EnemyPlugin() {
@@ -31,10 +31,10 @@ public class EnemyPlugin implements IGamePluginService {
         // Add entities to the world
         enemy1 = createEnemy(gameData);
         enemy2 = createEnemy(gameData);
-        enemy3 = createEnemy(gameData);
-        enemyID = world.addEntity(enemy1);
+//        enemy3 = createEnemy(gameData);
+        world.addEntity(enemy1);
         world.addEntity(enemy2);
-        world.addEntity(enemy3);
+//        world.addEntity(enemy3);
         
     }
 
@@ -68,6 +68,10 @@ public class EnemyPlugin implements IGamePluginService {
     }
     
     public int randomPos() {
-        return (int) rand.nextInt(800);
+        int randInt = (int) rand.nextInt(800);
+        if (randInt < 200) {
+            randInt += 400;
+        } else return randInt; 
+       return randInt;
     }
 }
