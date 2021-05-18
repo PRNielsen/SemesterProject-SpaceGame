@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-Description: Generated using Pax-Construct
+Bundle-SymbolicName: dk.sdu.mmmi.enemy
+Built-By: Shark
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1621283716339
+Bundle-ActivationPolicy: lazy
+Import-Package: dk.sdu.mmmi.Enemy;version="1.0.0.SNAPSHOT",dk.sdu.mmmi
+ .common.data,dk.sdu.mmmi.common.data.entitypart,dk.sdu.mmmi.common.se
+ rvices,dk.sdu.mmmi.commonEnemy;version="1.0.0.SNAPSHOT",dk.sdu.mmmi.p
+ layer;version="1.0.0.SNAPSHOT"
+Service-Component: META-INF/entityprocessor.xml,META-INF/gameplugin.xm
+ l
+Tool: Bnd-0.0.255
+Export-Package: dk.sdu.mmmi.Enemy;uses:="dk.sdu.mmmi.commonEnemy,dk.sd
+ u.mmmi.player,dk.sdu.mmmi.common.data.entitypart,dk.sdu.mmmi.common.s
+ ervices,dk.sdu.mmmi.common.data";version="1.0.0.SNAPSHOT"
+Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-Name: Enemy
+Private-Package: dk.sdu.mmmi.Enemy.internal.*
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.8.0_281
+
