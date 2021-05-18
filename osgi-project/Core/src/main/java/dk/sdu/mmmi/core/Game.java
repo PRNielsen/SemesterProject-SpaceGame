@@ -124,6 +124,9 @@ public class Game implements ApplicationListener {
             entityClass = entity.getClass().toString();
             if (!spriteMap.containsKey(entityClass)) {
                 Asset assetPart = entity.getPart(Asset.class);
+                System.out.println(assetPart.getAssetName());
+                System.out.println(assetPart.getJarUrl());
+                System.out.println(assetPart.getIdentifier());
                 assetPath = al.getJarUrl(assetPart.getAssetName(), 
                     assetPart.getJarUrl(), 
                     assetPart.getIdentifier()
