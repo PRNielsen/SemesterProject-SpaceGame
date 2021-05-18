@@ -3,7 +3,7 @@ Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: OSGiRoom
 Built-By: asbjo
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1621294245821
+Bnd-LastModified: 1621329971257
 Bundle-ActivationPolicy: lazy
 Import-Package: dk.sdu.mmmi.common.data,dk.sdu.mmmi.common.data.worldp
  art,dk.sdu.mmmi.common.services,dk.sdu.mmmi.room;version="1.0.0.0SNAP

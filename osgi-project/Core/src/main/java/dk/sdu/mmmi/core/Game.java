@@ -177,27 +177,27 @@ public class Game implements ApplicationListener {
         batch.end();
         for (Entity entity : world.getEntities()) {
     
-            sr.setColor(1, 1, 1, 1);
-
-            sr.begin(ShapeRenderer.ShapeType.Line);
-
-            float[] shapex = entity.getShapeX();
-            float[] shapey = entity.getShapeY();
-
-            for (int i = 0, j = shapex.length - 1;
-                    i < shapex.length;
-                    j = i++) {
-
-                sr.line(shapex[i], shapey[i], shapex[j], shapey[j]);
-            }
-            sr.end();
-            sr.begin(ShapeRenderer.ShapeType.Line);
-            sr.setColor(0, 1, 0, 1);
+//            sr.setColor(1, 1, 1, 1);
+//
+//            sr.begin(ShapeRenderer.ShapeType.Line);
+//
+//            float[] shapex = entity.getShapeX();
+//            float[] shapey = entity.getShapeY();
+//
+//            for (int i = 0, j = shapex.length - 1;
+//                    i < shapex.length;
+//                    j = i++) {
+//
+//                sr.line(shapex[i], shapey[i], shapex[j], shapey[j]);
+//            }
+//            sr.end();
+//            sr.begin(ShapeRenderer.ShapeType.Line);
+//            sr.setColor(0, 1, 0, 1);
             Position positionPart = entity.getPart(Position.class);
             float x = positionPart.getX();
             float y = positionPart.getY();
-            sr.circle(x, y, 50);
-            sr.end();
+//            sr.circle(x, y, 50);
+//            sr.end();
             
             cam.update();
             mapRenderer.setView(cam);
@@ -205,12 +205,11 @@ public class Game implements ApplicationListener {
             // 
             entityClass = entity.getClass().toString();
             sprite = spriteMap.get(entityClass);
-            sprite.setOrigin(x, y);
-            sprite.setCenter(x, y);
-            
+            //sprite.setCenter(x, y);
+            sprite.setOrigin(x,y);
             
             batch.begin();
-            batch.draw(sprite, x, y);
+            batch.draw(sprite, x - 25, y - 25, 50, 50);
             batch.end();
         }
     }

@@ -39,7 +39,7 @@ public class PlayerPlugin implements IGamePluginService {
         float maxSpeed = 300;
         float rotationSpeed = 5;
         float x = gameData.getDisplayWidth() + 400;
-        float y = gameData.getDisplayHeight() + 300;
+        float y = gameData.getDisplayHeight() + 200;
         float radians = 3.1415f / 2;
         int atkDmg = 1;
         int range = 50;
