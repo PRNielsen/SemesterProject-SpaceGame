@@ -3,7 +3,7 @@ Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: OSGiRoom
 Built-By: Shark
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1621283713871
+Bnd-LastModified: 1621370798504
 Bundle-ActivationPolicy: lazy
 Import-Package: dk.sdu.mmmi.common.data,dk.sdu.mmmi.common.data.entity
  part,dk.sdu.mmmi.common.services,dk.sdu.mmmi.room;version="1.0.0.0SNA

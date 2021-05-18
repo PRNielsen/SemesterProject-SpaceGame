@@ -8,36 +8,51 @@ import dk.sdu.mmmi.common.data.entitypart.Health;
 import dk.sdu.mmmi.common.data.entitypart.Movement;
 import dk.sdu.mmmi.common.data.entitypart.Position;
 import dk.sdu.mmmi.common.services.IPostEntityProcessingService;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class AttackSystem implements AttackSystemSPI {
      Combat attackerStats;
+     long lastAttack = 0;
+//     long initialTime = System.currentTimeMillis();
+//     long currentTime;
+//     long cooldownTime = 1000; // 1000 milliseconds
     
     
     @Override
     public void performAttack(World world) {
         // two loops for comparing two entities in the world
+//        initialTime = System.currentTimeMillis();
         for (Entity entity1 : world.getEntities()) {
             for (Entity entity2 : world.getEntities()) {
-                
+
                 // if the two entities are identical, skip the iteration
                 if (entity1.getID().equals(entity2.getID())) {
                     continue;
 
                 }
                 attackerStats = entity1.getPart(Combat.class); //gets combat entity part
-                if(!(attackerStats == null)){ //Checks if entity1 have a Combat entitypart. No Attack detection if no combat entitypart.
+                if (!(attackerStats == null)) { //Checks if entity1 have a Combat entitypart. No Attack detection if no combat entitypart.
                     if (this.withinAttackRange(entity1, entity2)) { //Attack Detection
-                        
-                        //if Attack detection is true, entity 2 should get hit and take damage
-                        Health entityHealth = entity2.getPart(Health.class); //gets health entity part
-                        if (entityHealth.getLife() > 0) {
-                            entityHealth.setLife(entityHealth.getLife() - attackerStats.getAtkDmg()); //Minus entity2 health by entity1 attackDmg
-                            entityHealth.setIsHit(true);
-                            
-                            // if entity is out of life - remove
-                            if (entityHealth.getLife() <= 0) {
-                                world.removeEntity(entity2);
-                            }
+//                        currentTime = System.currentTimeMillis();
+//                        System.out.println("InitialTime : " +initialTime);
+//                        System.out.println("CurrentTime : " +currentTime);
+//                        if (currentTime - initialTime > cooldownTime) {
+
+                            //if Attack detection is true, entity 2 should get hit and take damage
+                            Health entityHealth = entity2.getPart(Health.class); //gets health entity part
+                            if (entityHealth.getLife() > 0) {
+                                entityHealth.setLife(entityHealth.getLife() - attackerStats.getAtkDmg()); //Minus entity2 health by entity1 attackDmg
+                                entityHealth.setIsHit(true);
+
+                                // if entity is out of life - remove
+                                if (entityHealth.getLife() <= 0) {
+                                    world.removeEntity(entity2);
+                                }
+//                                cooldown();
+                                System.out.println("Attack success!");
+
+//                            }
                         }
                     }
                 }
@@ -90,5 +105,12 @@ public class AttackSystem implements AttackSystemSPI {
         }
         return false;
     }
-
+    
+//    public void cooldown() {
+//    long time = System.currentTimeMillis();
+//    if (time > lastAttack + cooldownTime) {
+//        // Do something
+//        lastAttack = time;
+//        } 
+//    }
 }

@@ -3,7 +3,7 @@ Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: dk.sdu.mmmi.commonEnemy
 Built-By: Shark
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1621283715225
+Bnd-LastModified: 1621370800371
 Bundle-ActivationPolicy: lazy
 Import-Package: dk.sdu.mmmi.common.data,dk.sdu.mmmi.commonEnemy;versio
  n="1.0.0.SNAPSHOT"

@@ -3,18 +3,20 @@ Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: dk.sdu.mmmi.enemy
 Built-By: Shark
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1621283716339
+Bnd-LastModified: 1621370801049
 Bundle-ActivationPolicy: lazy
 Import-Package: dk.sdu.mmmi.Enemy;version="1.0.0.SNAPSHOT",dk.sdu.mmmi
- .common.data,dk.sdu.mmmi.common.data.entitypart,dk.sdu.mmmi.common.se
- rvices,dk.sdu.mmmi.commonEnemy;version="1.0.0.SNAPSHOT",dk.sdu.mmmi.p
- layer;version="1.0.0.SNAPSHOT"
+ .attack;version="1.0.0.SNAPSHOT",dk.sdu.mmmi.common.data,dk.sdu.mmmi.
+ common.data.entitypart,dk.sdu.mmmi.common.services,dk.sdu.mmmi.common
+ Enemy;version="1.0.0.SNAPSHOT",dk.sdu.mmmi.player;version="1.0.0.SNAP
+ SHOT"
 Service-Component: META-INF/entityprocessor.xml,META-INF/gameplugin.xm
  l
 Tool: Bnd-0.0.255
 Export-Package: dk.sdu.mmmi.Enemy;uses:="dk.sdu.mmmi.commonEnemy,dk.sd
  u.mmmi.player,dk.sdu.mmmi.common.data.entitypart,dk.sdu.mmmi.common.s
- ervices,dk.sdu.mmmi.common.data";version="1.0.0.SNAPSHOT"
+ ervices,dk.sdu.mmmi.common.data,dk.sdu.mmmi.attack";version="1.0.0.SN
+ APSHOT"
 Bundle-Version: 1.0.0.SNAPSHOT
 Bundle-Name: Enemy
 Private-Package: dk.sdu.mmmi.Enemy.internal.*

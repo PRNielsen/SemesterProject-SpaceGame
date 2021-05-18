@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="dk.sdu.mmmi.playerprocessor">
+    <implementation class="dk.sdu.mmmi.player.PlayerControlSystem"/>
+    <service>
+        <provide interface="dk.sdu.mmmi.common.services.IEntityProcessingService"/>
+    </service>
+    
+    <reference bind="setAttackSystem" cardinality="0..n"
+               interface="dk.sdu.mmmi.attack.AttackSystemSPI"
+               name="AttackDetectorSPI" policy="dynamic" unbind="removeAttackSystem"/>
+</scr:component>
