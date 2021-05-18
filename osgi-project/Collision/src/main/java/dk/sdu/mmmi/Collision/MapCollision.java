@@ -49,9 +49,9 @@ public class MapCollision implements IPostEntityProcessingService {
         boolean eastNeighbourTile = false;
         Position entityPos = entity.getPart(Position.class);
         RoomProperties room = entity2.getPart(RoomProperties.class);
-        
+
         boolean[][] roomTiles = room.getTiles();
-        
+
 //        for (boolean[] row : roomTiles) {
 //            for (boolean field : row) {
 //                if (field) {
@@ -60,97 +60,96 @@ public class MapCollision implements IPostEntityProcessingService {
 //                    System.out.print(" W ");
 //                }
 //            }
-//            System.out.println();
+//            System.out.println(" ");
 //        }
-        
         boolean playerTile = room.getTile(entityPos.getX(), entityPos.getY()); //get the tile the entity is currently on
         int r = (int) entityPos.getX() / 50;
-            if(entityPos.getX() == 800){
-                r = 15;
-            }
-            int c = (int) entityPos.getY() / 50;
-            if(entityPos.getY() == 800){
-                c = 15;
-            }
+        if (r > 15) {
+            r = 15;
+        }
+        int c = 15 - ((int) entityPos.getY() / 50);
+        if (c < 0) {
+            c = 0;
+        }
         //System.out.println(entity.getClass());
-        //System.out.println("Entity x pos: " + entityPos.getX());
-        //System.out.println("Entity y pos: " + entityPos.getY());
-        //System.out.println("entity x tile pos: " + r);
-        //System.out.println("Entity y tile pos: " + c);
-        
+        System.out.println("Entity x pos: " + entityPos.getX());
+        System.out.println("Entity y pos: " + entityPos.getY());
+        System.out.println("entity x tile pos: " + r);
+        System.out.println("Entity y tile pos: " + c);
+
         float testX = 0;
         float testY = 0;
-        
-        float sx = 0, sw = 0, sy = 0, sh = 0;
-        
-        if(!(c <= 0)){
-            northNeighbourTile = roomTiles[r][c-1];
-            System.out.println("North: " + northNeighbourTile);
-        }
-        if(!(r <= 15)){
-            southNeighbourTile = roomTiles[r][c+1];
-            System.out.println("South: " + southNeighbourTile);
-        }
-        if(!(r <= 0)){
-            westNeighbourTile = roomTiles[r-1][c];
-            System.out.println("West: " + westNeighbourTile);
-        }
-        if(!(r <= 15)){
-            eastNeighbourTile = roomTiles[r+1][c];
-            System.out.println("East: " + eastNeighbourTile);
-        }
-        
-        if (northNeighbourTile){
-            if(!(c <= 0)){
 
-            float[] coordinates = room.getAreaOfTile(r, c-1);
-            sx = coordinates[0];
-            sw = coordinates[1];
-            sy = coordinates[2];
-            sh = coordinates[3];
-            //System.out.println("North");
+        float sx = 0, sw = 0, sy = 0, sh = 0;
+
+        if (r > 0) {
+            northNeighbourTile = roomTiles[r - 1][c];
+            //System.out.println("North: " + northNeighbourTile);
+        }
+        if (r < 15) {
+            southNeighbourTile = roomTiles[r + 1][c];
+            //System.out.println("South: " + southNeighbourTile);
+        }
+        if (c > 0) {
+            westNeighbourTile = roomTiles[r][c - 1];
+            //System.out.println("West: " + westNeighbourTile);
+        }
+        if (c < 15) {
+            eastNeighbourTile = roomTiles[r][c + 1];
+            //System.out.println("East: " + eastNeighbourTile);
+        }
+
+        if (northNeighbourTile) {
+            if (!(c <= 0)) {
+
+                float[] coordinates = room.getAreaOfTile(r, c - 1);
+                sx = coordinates[0];
+                sw = coordinates[1];
+                sy = coordinates[2];
+                sh = coordinates[3];
+                //System.out.println("North");
             }
         }
-        if (southNeighbourTile){
-            float[] coordinates = room.getAreaOfTile(r, c+1);
+        if (southNeighbourTile) {
+            float[] coordinates = room.getAreaOfTile(r, c + 1);
             sx = coordinates[0];
             sw = coordinates[1];
             sy = coordinates[2];
             sh = coordinates[3];
             //System.out.println("South");
         }
-        if (westNeighbourTile){
-            float[] coordinates = room.getAreaOfTile(r-1, c);
+        if (westNeighbourTile) {
+            float[] coordinates = room.getAreaOfTile(r - 1, c);
             sx = coordinates[0];
             sw = coordinates[1];
             sy = coordinates[2];
             sh = coordinates[3];
             //System.out.println("West");
         }
-        if (eastNeighbourTile){
-            float[] coordinates = room.getAreaOfTile(r+1, c);
+        if (eastNeighbourTile) {
+            float[] coordinates = room.getAreaOfTile(r + 1, c);
             sx = coordinates[0];
             sw = coordinates[1];
             sy = coordinates[2];
             sh = coordinates[3];
             //System.out.println("East");
         }
-        
-        if(entityPos.getX() < sx){
-                testX = sx;
-            } else if (entityPos.getX() > sx+sw){
-                testX = sx+sw;
-            }
-            if (entityPos.getY() < sy) {
-                testY = sy;
-            } else if (entityPos.getX() > sy+sh){
-                testY = sy+sh;
-            }
-        
+
+        if (entityPos.getX() < sx) {
+            testX = sx;
+        } else if (entityPos.getX() > sx + sw) {
+            testX = sx + sw;
+        }
+        if (entityPos.getY() < sy) {
+            testY = sy;
+        } else if (entityPos.getX() > sy + sh) {
+            testY = sy + sh;
+        }
+
         float distX = entityPos.getX() - testX;
         float distY = entityPos.getY() - testY;
-        float distance = (float) Math.sqrt((distX*distX)+(distY*distY));
-        
+        float distance = (float) Math.sqrt((distX * distX) + (distY * distY));
+
         //float dx = (float) entMov.getX() - (float) entMov2.getX();
         //float dy = (float) entMov.getY() - (float) entMov2.getY();
         //float distance = (float) Math.sqrt(dx * dx + dy * dy);

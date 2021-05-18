@@ -44,9 +44,9 @@ public class RoomProperties implements WorldPart {
             if(r == 16){
                 r = 15;
             }
-            int c = (int) posY / 50;
-            if(c == 16){
-                c = 15;
+            int c = 15 -((int) posY / 50);
+            if(c < 0){
+                c = 0;
             }
             return tiles[r][c];
         } 

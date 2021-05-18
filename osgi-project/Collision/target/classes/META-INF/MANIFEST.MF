@@ -3,7 +3,7 @@ Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: Collision
 Built-By: Daniel Tran
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1621348685718
+Bnd-LastModified: 1621353674461
 Bundle-ActivationPolicy: lazy
 Import-Package: dk.sdu.mmmi.Collision;version="1.0.0.SNAPSHOT",dk.sdu.
  mmmi.common.data,dk.sdu.mmmi.common.data.entitypart,dk.sdu.mmmi.commo

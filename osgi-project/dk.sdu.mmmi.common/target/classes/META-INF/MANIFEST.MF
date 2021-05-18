@@ -3,7 +3,7 @@ Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: dk.sdu.mmmi.common
 Built-By: Daniel Tran
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1621334547615
+Bnd-LastModified: 1621353657110
 Import-Package: dk.sdu.mmmi.common.data,dk.sdu.mmmi.common.data.entity
  part,dk.sdu.mmmi.common.data.worldpart,dk.sdu.mmmi.common.events,dk.s
  du.mmmi.common.services

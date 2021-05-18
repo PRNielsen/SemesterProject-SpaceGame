@@ -3,7 +3,7 @@ Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: Attack
 Built-By: Daniel Tran
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1621334550411
+Bnd-LastModified: 1621353661114
 Bundle-ActivationPolicy: lazy
 Import-Package: dk.sdu.mmmi.attack;version="1.0.0.SNAPSHOT",dk.sdu.mmm
  i.common.data,dk.sdu.mmmi.common.data.entitypart
