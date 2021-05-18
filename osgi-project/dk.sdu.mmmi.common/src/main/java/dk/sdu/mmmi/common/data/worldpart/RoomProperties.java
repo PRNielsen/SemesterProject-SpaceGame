@@ -33,11 +33,21 @@ public class RoomProperties implements WorldPart {
         this.tiles[r][c] = isBlocked;
     }
     
+    public boolean[][] getTiles(){
+        return this.tiles;
+    }
+    
     // Takes pixel coordinates
     public boolean getTile(float posX, float posY) {
         if(posX <= 800 && posY <= 800) {
             int r = (int) posX / 50;
-            int c = (int) posY / 50;
+            if(r == 16){
+                r = 15;
+            }
+            int c = 15 -((int) posY / 50);
+            if(c < 0){
+                c = 0;
+            }
             return tiles[r][c];
         } 
         return tiles[0][0];
@@ -45,12 +55,12 @@ public class RoomProperties implements WorldPart {
     
     // Takes indexes of row and column and outputs array defining area:
     // E.g tiles[
-    public int[] getAreaOfTile(int r, int c) {
-        int x1 = c * 50;
-        int x2 = x1 + 50;
-        int y1 = 800 - (r * 50);
-        int y2 = y1 + 50;
-        return new int[] {x1, x2, y1, y2};
+    public float[] getAreaOfTile(int r, int c) {
+        float x1 = c * 50;
+        float x2 = x1 + 50;
+        float y1 = 800 - (r * 50);
+        float y2 = y1 - 50;
+        return new float[] {x1, x2, y1, y2};
     }
     
     @Override

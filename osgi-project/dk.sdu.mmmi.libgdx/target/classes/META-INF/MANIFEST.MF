@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-Description: Simple OSGi wrapper around third-party jar(s)
 Bundle-SymbolicName: dk.sdu.mmmi.libgdx
-Built-By: asbjo
+Built-By: Daniel Tran
 Bundle-ManifestVersion: 2
 Bnd-LastModified: 1621354979533
 Embed-Dependency: *;scope=compile|runtime;type=!pom;inline=true
@@ -339,5 +339,5 @@ Ignore-Package: org.osgi.framework.launch,japa.parser.ast.visitor,japa
 Private-Package: !*
 Embed-Transitive: true
 Created-By: Apache Maven Bundle Plugin
-Build-Jdk: 1.8.0_282
+Build-Jdk: 1.8.0_281
 
