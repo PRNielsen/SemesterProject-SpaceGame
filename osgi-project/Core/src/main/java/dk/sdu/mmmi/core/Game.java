@@ -162,6 +162,7 @@ public class Game implements ApplicationListener {
     }
 
     private void update() {
+        
         // Update
         for (IEntityProcessingService entityProcessorService : entityProcessorList) {
             entityProcessorService.process(gameData, world);

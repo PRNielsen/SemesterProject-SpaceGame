@@ -3,7 +3,7 @@ Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: dk.sdu.mmmi.ai
 Built-By: asbjo
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1621334554659
+Bnd-LastModified: 1621354994736
 Bundle-ActivationPolicy: lazy
 Import-Package: com.badlogic.gdx.ai.pfa,com.badlogic.gdx.ai.pfa.indexe
  d,com.badlogic.gdx.math,com.badlogic.gdx.utils,dk.sdu.mmmi.ai;version

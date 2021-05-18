@@ -14,11 +14,14 @@ import dk.sdu.mmmi.common.data.entitypart.Movement;
 import dk.sdu.mmmi.common.data.entitypart.Position;
 import dk.sdu.mmmi.common.services.IGamePluginService;
 import dk.sdu.mmmi.commonEnemy.Enemy;
+import java.util.Random;
 
 public class EnemyPlugin implements IGamePluginService {
     private String enemyID;
-    Entity enemy;
-
+    Entity enemy1;
+    Entity enemy2;
+    Entity enemy3;
+    Random rand = new Random();
 
     public EnemyPlugin() {
     }
@@ -26,8 +29,12 @@ public class EnemyPlugin implements IGamePluginService {
     @Override
     public void start(GameData gameData, World world) {
         // Add entities to the world
-        enemy = createEnemy(gameData);
-        enemyID = world.addEntity(enemy);
+        enemy1 = createEnemy(gameData);
+        enemy2 = createEnemy(gameData);
+        enemy3 = createEnemy(gameData);
+        enemyID = world.addEntity(enemy1);
+        world.addEntity(enemy2);
+        world.addEntity(enemy3);
         
     }
 
@@ -38,11 +45,11 @@ public class EnemyPlugin implements IGamePluginService {
         String identifier = "dk.sdu.mmmi.Enemy";
 
         float deacceleration = 1000;
-        float acceleration = 200;
+        float acceleration = 170;
         float maxSpeed = 250;
         float rotationSpeed = 5;
-        float x = 5.5f;
-        float y = 5.5f;
+        float x = randomPos();
+        float y = randomPos();
         float radians = 3.1415f / 2;
         
         enemy.add(new Health(3));
@@ -58,5 +65,9 @@ public class EnemyPlugin implements IGamePluginService {
     public void stop(GameData gameData, World world) {
         // Remove entities
         world.removeEntity(enemyID);
+    }
+    
+    public int randomPos() {
+        return (int) rand.nextInt(800);
     }
 }

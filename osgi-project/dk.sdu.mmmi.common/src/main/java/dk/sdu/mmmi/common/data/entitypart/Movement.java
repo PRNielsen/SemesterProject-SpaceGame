@@ -102,8 +102,9 @@ public class Movement
         if (left) {
             if (dx > 0) {
                 dx = 0;
+                dy /= 2;
             }
-            this.dx -= acceleration * dt;
+            this.dx -=  acceleration * dt;
             setLastDirection('w');
             radians = 3.1f;
         }
@@ -111,6 +112,7 @@ public class Movement
         if (right) {
             if (dx < 0) {
                 dx = 0;
+                dy /= 2;
             }
             this.dx += acceleration * dt;
             setLastDirection('e');
@@ -120,8 +122,9 @@ public class Movement
         if (up) {
             if (dy < 0) {
                 dy = 0;
+                dx /= 2;
             }
-            dy += acceleration * dt;
+            dy +=  acceleration * dt;
             setLastDirection('n');
             radians = 1.57f;
         }
@@ -129,8 +132,9 @@ public class Movement
         if (down) {
             if (dy > 0) {
                 dy = 0;
+                dx /= 2;
             }
-            dy -= acceleration * dt;
+            dy -=  acceleration * dt;
             setLastDirection('s');
             radians = 4.7f;
         }
@@ -176,5 +180,4 @@ public class Movement
 
         positionPart.setRadians(radians);
     }
-
 }

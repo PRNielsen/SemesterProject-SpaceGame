@@ -58,7 +58,6 @@
     <module>dk.sdu.mmmi.ai</module>
     <module>dk.sdu.mmmi.commonEnemy</module>
     <module>dk.sdu.mmmi.Enemy</module>
-    <module>DummyEnemy</module>
   </modules>
 
   <build>

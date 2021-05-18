@@ -3,7 +3,7 @@ Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: dk.sdu.mmmi.enemy
 Built-By: asbjo
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1621334556556
+Bnd-LastModified: 1621354999281
 Bundle-ActivationPolicy: lazy
 Import-Package: dk.sdu.mmmi.Enemy;version="1.0.0.SNAPSHOT",dk.sdu.mmmi
  .common.data,dk.sdu.mmmi.common.data.entitypart,dk.sdu.mmmi.common.se

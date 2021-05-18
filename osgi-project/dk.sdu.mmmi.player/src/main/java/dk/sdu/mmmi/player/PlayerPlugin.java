@@ -35,11 +35,11 @@ public class PlayerPlugin implements IGamePluginService {
         String identifier = "dk.sdu.mmmi.player";
     
         float deacceleration = 1000;
-        float acceleration = 280;
+        float acceleration = 295;
         float maxSpeed = 300;
         float rotationSpeed = 5;
-        float x = gameData.getDisplayWidth() + 400;
-        float y = gameData.getDisplayHeight() + 200;
+        float x = 400;
+        float y = 200;
         float radians = 3.1415f / 2;
         int atkDmg = 1;
         int range = 50;
