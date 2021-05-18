@@ -1,3 +1,0 @@
-Bundle-SymbolicName: OSGiRoom
-Bundle-ActivationPolicy: lazy
-Service-Component: META-INF/worldmapprocessor.xml, META-INF/gameplugin.xml
