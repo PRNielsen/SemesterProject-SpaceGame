@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-Description: Generated using Pax-Construct
+Bundle-SymbolicName: dk.sdu.mmmi.commonEnemy
+Built-By: asbjo
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1621334555329
+Bundle-ActivationPolicy: lazy
+Import-Package: dk.sdu.mmmi.common.data,dk.sdu.mmmi.commonEnemy;versio
+ n="1.0.0.SNAPSHOT"
+Tool: Bnd-0.0.255
+Export-Package: dk.sdu.mmmi.commonEnemy;uses:="dk.sdu.mmmi.common.data
+ ";version="1.0.0.SNAPSHOT"
+Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-Name: CommonEnemy
+Private-Package: dk.sdu.mmmi.commonEnemy.internal.*
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.8.0_282
+

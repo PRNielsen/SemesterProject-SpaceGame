@@ -3,7 +3,7 @@ Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: dk.sdu.mmmi.asset
 Built-By: Daniel Tran
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1621348676838
+Bnd-LastModified: 1621329964827
 Import-Package: asset.classes,asset.interfaces,com.badlogic.gdx.assets
  .loaders,com.badlogic.gdx.files,com.badlogic.gdx.graphics.g2d,dk.sdu.
  mmmi.common.data
