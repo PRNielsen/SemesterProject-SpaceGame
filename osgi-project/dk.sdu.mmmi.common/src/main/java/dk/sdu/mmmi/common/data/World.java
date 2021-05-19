@@ -48,7 +48,7 @@ public class World {
         return entityMap.get(ID);
     }
     
-        public String addWorldMap(WorldMap worldMap) {
+    public String addWorldMap(WorldMap worldMap) {
         gameWorldMap.put(worldMap.getID(), worldMap);
         return worldMap.getID();
     }

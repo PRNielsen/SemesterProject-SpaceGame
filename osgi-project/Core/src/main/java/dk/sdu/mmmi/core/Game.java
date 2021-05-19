@@ -58,6 +58,7 @@ public class Game implements ApplicationListener {
     private static List<IPostEntityProcessingService> postEntityProcessorList = new CopyOnWriteArrayList<>();
     private static List<IWorldMapProcessingService> worldMapList = new CopyOnWriteArrayList<>();
     private Map<String , Sprite > spriteMap;
+    private Map<String , Texture> roomMap;
     
 
     public Game(){
@@ -90,6 +91,7 @@ public class Game implements ApplicationListener {
         batch = new SpriteBatch();
         al = new AssetLoader();
         spriteMap = new HashMap<>();
+        roomMap = new HashMap<>();
         AssetsJarFileResolver jfhr = new AssetsJarFileResolver();
         AssetManager am = new AssetManager(jfhr);
         am.setLoader(TiledMap.class, new TmxMapLoader());
@@ -98,15 +100,19 @@ public class Game implements ApplicationListener {
         
         // Map assets loaded into GameEngine
         for (WorldMap worldMap : world.getWorldMaps()) {
-            WorldMapAsset worldAssetPart = worldMap.getPart(WorldMapAsset.class);
-            // Get .txt file with the file names and file class. 
-            assetPath = al.getJarUrl(worldAssetPart.getAssetName(),
-                    worldAssetPart.getJarUrl(),
-                    worldAssetPart.getIdentifier()
-            );
-            am.load(assetPath, Texture.class);
-            am.finishLoading();
-            backgroundTex = am.get(assetPath, Texture.class);
+            worldMapClass = worldMap.getClass().toString();
+            if (!roomMap.containsKey(worldMapClass)) {
+                WorldMapAsset worldAssetPart = worldMap.getPart(WorldMapAsset.class);
+                // Get .txt file with the file names and file class. 
+                assetPath = al.getJarUrl(worldAssetPart.getAssetName(),
+                        worldAssetPart.getJarUrl(),
+                        worldAssetPart.getIdentifier()
+                );
+                am.load(assetPath, Texture.class);
+                am.finishLoading();
+                backgroundTex = am.get(assetPath, Texture.class);
+                roomMap.put(worldMapClass, backgroundTex);
+            }
         }
 
         mapRenderer = new OrthogonalTiledMapRenderer(tiledMap);
@@ -117,9 +123,6 @@ public class Game implements ApplicationListener {
             entityClass = entity.getClass().toString();
             if (!spriteMap.containsKey(entityClass)) {
                 Asset assetPart = entity.getPart(Asset.class);
-                System.out.println(assetPart.getAssetName());
-                System.out.println(assetPart.getJarUrl());
-                System.out.println(assetPart.getIdentifier());
                 assetPath = al.getJarUrl(assetPart.getAssetName(), 
                     assetPart.getJarUrl(), 
                     assetPart.getIdentifier()
@@ -134,9 +137,9 @@ public class Game implements ApplicationListener {
         
         Gdx.input.setInputProcessor(new GameInputProcessor(gameData));
         
-        for (IGamePluginService plugin : gamePluginList) {
-            plugin.start(gameData, world);
-        }
+//        for (IGamePluginService plugin : gamePluginList) {
+//            plugin.start(gameData, world);
+//        }
 
     }
 
@@ -168,9 +171,13 @@ public class Game implements ApplicationListener {
 
     private void draw() {
         
-        batch.begin();
-        batch.draw(backgroundTex, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());   
-        batch.end();
+        for (WorldMap worldMap : world.getWorldMaps()) {
+            batch.begin();
+            backgroundTex = roomMap.get(worldMapClass);
+            batch.draw(backgroundTex, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+            batch.end();
+        }
+
         for (Entity entity : world.getEntities()) {
 
             Position positionPart = entity.getPart(Position.class);

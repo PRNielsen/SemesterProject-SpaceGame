@@ -17,10 +17,9 @@ import dk.sdu.mmmi.commonEnemy.Enemy;
 import java.util.Random;
 
 public class EnemyPlugin implements IGamePluginService {
-    private String enemyID;
     Entity enemy1;
     Entity enemy2;
-//    Entity enemy3;
+    Entity enemy3;
     Random rand = new Random();
 
     public EnemyPlugin() {
@@ -31,10 +30,10 @@ public class EnemyPlugin implements IGamePluginService {
         // Add entities to the world
         enemy1 = createEnemy(gameData);
         enemy2 = createEnemy(gameData);
-//        enemy3 = createEnemy(gameData);
+        enemy3 = createEnemy(gameData);
         world.addEntity(enemy1);
         world.addEntity(enemy2);
-//        world.addEntity(enemy3);
+        world.addEntity(enemy3);
         
     }
 
@@ -63,9 +62,10 @@ public class EnemyPlugin implements IGamePluginService {
 
     @Override
     public void stop(GameData gameData, World world) {
-        // Remove entities
-        world.removeEntity(enemyID);
-    }
+        world.removeEntity(enemy1);
+        world.removeEntity(enemy2);
+        world.removeEntity(enemy3);
+    }    
     
     public int randomPos() {
         int randInt = (int) rand.nextInt(800);

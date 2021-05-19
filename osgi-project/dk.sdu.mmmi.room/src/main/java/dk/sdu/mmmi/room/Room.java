@@ -98,19 +98,19 @@ public class Room {
                 }
             }
         }
-        // Printing algorithm 
-        System.out.println("------  Room Tiles -------");
-        for (Tile[] row : this.tiles) {
-            for (Tile field : row) {
-                if (field.isBlocked()) {
-                    System.out.print(" B ");
-                } else {
-                    System.out.print(" W ");
-                }
-            }
-            System.out.println();
-        }
-        System.out.println("---------------------------");
+        // Printing out algorithm 
+//        System.out.println("------  Room Tiles -------");
+//        for (Tile[] row : this.tiles) {
+//            for (Tile field : row) {
+//                if (field.isBlocked()) {
+//                    System.out.print(" B ");
+//                } else {
+//                    System.out.print(" W ");
+//                }
+//            }
+//            System.out.println();
+//        }
+//        System.out.println("---------------------------");
     }
 
     public void setNorth(boolean north) {
