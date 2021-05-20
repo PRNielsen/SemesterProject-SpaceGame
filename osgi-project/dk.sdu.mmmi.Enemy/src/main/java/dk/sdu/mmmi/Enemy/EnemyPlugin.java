@@ -28,16 +28,16 @@ public class EnemyPlugin implements IGamePluginService {
     @Override
     public void start(GameData gameData, World world) {
         // Add entities to the world
-        enemy1 = createEnemy(gameData);
-        enemy2 = createEnemy(gameData);
-        enemy3 = createEnemy(gameData);
+        enemy1 = createEnemy();
+        enemy2 = createEnemy();
+        enemy3 = createEnemy();
         world.addEntity(enemy1);
         world.addEntity(enemy2);
         world.addEntity(enemy3);
         
     }
 
-    private Entity createEnemy(GameData gameData) {
+    private Entity createEnemy() {
         Entity enemy = new Enemy();
         String assetString = "assets/texture.png";
         String jarName = "dk.sdu.mmmi.Enemy" + "-1.0-SNAPSHOT.jar!";
@@ -46,14 +46,13 @@ public class EnemyPlugin implements IGamePluginService {
         float deacceleration = 1000;
         float acceleration = 170;
         float maxSpeed = 250;
-        float rotationSpeed = 5;
         float x = randomPos();
         float y = randomPos();
         float radians = 3.1415f / 2;
         
         enemy.add(new Health(3));
         enemy.setRadius(4);
-        enemy.add(new Movement(deacceleration, acceleration, maxSpeed, rotationSpeed));
+        enemy.add(new Movement(deacceleration, acceleration, maxSpeed));
         enemy.add(new Position(x, y, radians));
         enemy.add(new Asset(assetString, jarName, identifier));
         

@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-Description: Generated using Pax-Construct
+Bundle-SymbolicName: dk.sdu.mmmi.ai
+Built-By: Shark
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1621520442190
+Bundle-ActivationPolicy: lazy
+Import-Package: com.badlogic.gdx.ai.pfa,com.badlogic.gdx.ai.pfa.indexe
+ d,com.badlogic.gdx.math,com.badlogic.gdx.utils,dk.sdu.mmmi.ai;version
+ ="1.0.0.SNAPSHOT",dk.sdu.mmmi.common.data,dk.sdu.mmmi.common.data.ent
+ itypart
+Tool: Bnd-0.0.255
+Export-Package: dk.sdu.mmmi.ai;uses:="com.badlogic.gdx.ai.pfa,com.badl
+ ogic.gdx.utils,com.badlogic.gdx.ai.pfa.indexed,dk.sdu.mmmi.common.dat
+ a.entitypart,com.badlogic.gdx.math,dk.sdu.mmmi.common.data";version="
+ 1.0.0.SNAPSHOT"
+Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-Name: AI
+Private-Package: dk.sdu.mmmi.ai.internal.*
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.8.0_281
+

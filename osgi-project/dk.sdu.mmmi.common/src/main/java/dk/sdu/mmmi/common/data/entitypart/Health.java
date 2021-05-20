@@ -3,10 +3,6 @@ package dk.sdu.mmmi.common.data.entitypart;
 import dk.sdu.mmmi.common.data.Entity;
 import dk.sdu.mmmi.common.data.GameData;
 
-/**
- *
- * @author Someone
- */
 public class Health implements EntityPart {
 
     private boolean dead = false;

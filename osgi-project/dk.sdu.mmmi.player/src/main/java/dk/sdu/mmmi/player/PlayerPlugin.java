@@ -11,8 +11,6 @@ import dk.sdu.mmmi.common.data.entitypart.Position;
 import dk.sdu.mmmi.common.services.IGamePluginService;
 
 
-//@ServiceProviders(value = {
-   // @ServiceProvider(service = IGamePluginService.class),})
 public class PlayerPlugin implements IGamePluginService {
     
     private Entity player;
@@ -37,7 +35,6 @@ public class PlayerPlugin implements IGamePluginService {
         float deacceleration = 1000;
         float acceleration = 300;
         float maxSpeed = 300;
-        float rotationSpeed = 5;
         float x = 400;
         float y = 200;
         float radians = 3.1415f / 2;
@@ -46,9 +43,8 @@ public class PlayerPlugin implements IGamePluginService {
         
         
         
-        //player.setTexture()
         player.setRadius(8);
-        player.add(new Movement(deacceleration, acceleration, maxSpeed, rotationSpeed));
+        player.add(new Movement(deacceleration, acceleration, maxSpeed));
         player.add(new Position(x, y, radians));
         player.add(new Health(1));
         player.add(new Combat(atkDmg, range));

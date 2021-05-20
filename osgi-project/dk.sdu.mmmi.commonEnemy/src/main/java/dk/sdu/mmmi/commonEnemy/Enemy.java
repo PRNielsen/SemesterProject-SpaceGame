@@ -7,10 +7,6 @@ package dk.sdu.mmmi.commonEnemy;
 
 import dk.sdu.mmmi.common.data.Entity;
 
-/**
- *
- * @author Shark
- */
 public class Enemy extends Entity{
     
 }

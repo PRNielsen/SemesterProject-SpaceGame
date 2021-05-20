@@ -9,10 +9,6 @@ import dk.sdu.mmmi.common.data.Entity;
 import dk.sdu.mmmi.common.data.GameData;
 import static java.lang.Math.sqrt;
 
-/**
- *
- * @author Alexander
- */
 public class Movement implements EntityPart {
 
     private float dx, dy;
@@ -21,7 +17,7 @@ public class Movement implements EntityPart {
     private boolean left, right, up, down, space;
     private char lastDirection = 'n';
 
-    public Movement(float deceleration, float acceleration, float maxSpeed, float rotationSpeed) {
+    public Movement(float deceleration, float acceleration, float maxSpeed) {
         this.deceleration = deceleration;
         this.acceleration = acceleration;
         this.maxSpeed = maxSpeed;

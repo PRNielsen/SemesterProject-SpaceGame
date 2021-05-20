@@ -5,10 +5,6 @@
  */
 package dk.sdu.mmmi.ai;
 
-/**
- *
- * @author Shark
- */
 public class Node {  
     // Coordinates for the start and target.
     public float x,y;

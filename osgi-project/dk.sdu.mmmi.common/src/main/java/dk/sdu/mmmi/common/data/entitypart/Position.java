@@ -8,10 +8,6 @@ package dk.sdu.mmmi.common.data.entitypart;
 import dk.sdu.mmmi.common.data.Entity;
 import dk.sdu.mmmi.common.data.GameData;
 
-/**
- *
- * @author Alexander
- */
 public class Position implements EntityPart {
 
     private float x;
@@ -49,9 +45,9 @@ public class Position implements EntityPart {
         this.y = newY;
     }
 
-//    public void setRadians(float radians) {
-//        this.radians = radians;
-//    }
+    public void setRadians(float radians) {
+        this.radians = radians;
+    }
 
     @Override
     public void process(GameData gameData, Entity entity) {
