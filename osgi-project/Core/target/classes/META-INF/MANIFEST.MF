@@ -3,7 +3,7 @@ Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: Core
 Built-By: Shark
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1621520439912
+Bnd-LastModified: 1621613622326
 Import-Package: com.badlogic.gdx,com.badlogic.gdx.assets,com.badlogic.
  gdx.assets.loaders,com.badlogic.gdx.backends.lwjgl,com.badlogic.gdx.f
  iles,com.badlogic.gdx.graphics,com.badlogic.gdx.graphics.g2d,com.badl

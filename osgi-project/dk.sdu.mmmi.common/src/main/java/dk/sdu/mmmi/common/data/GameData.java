@@ -1,6 +1,5 @@
 package dk.sdu.mmmi.common.data;
 
-import dk.sdu.mmmi.common.events.Event;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
