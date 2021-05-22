@@ -39,7 +39,6 @@ public class AttackSystemTest {
     public void setUp() {
         this.world = new World();
         this.gameData = new GameData();
-        //this.gameData.setDelta(1f);
 
         float deacceleration = 1000;
         float acceleration = 300;
