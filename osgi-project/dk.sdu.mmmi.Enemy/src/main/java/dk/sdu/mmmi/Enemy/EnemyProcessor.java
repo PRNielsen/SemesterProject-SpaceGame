@@ -24,7 +24,7 @@ public class EnemyProcessor implements IEntityProcessingService {
     boolean right;
     boolean up;
     boolean down;
-
+    
 
     @Override
     public void process(GameData gameData, World world) {
