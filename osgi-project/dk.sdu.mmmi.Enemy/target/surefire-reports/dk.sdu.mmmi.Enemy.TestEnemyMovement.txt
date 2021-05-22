@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: dk.sdu.mmmi.Enemy.EnemyProcessorTest
+Test set: dk.sdu.mmmi.Enemy.TestEnemyMovement
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.42 s - in dk.sdu.mmmi.Enemy.EnemyProcessorTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.446 s - in dk.sdu.mmmi.Enemy.TestEnemyMovement
