@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: dk.sdu.mmmi.player
-Built-By: Shark
+Built-By: Daniel Tran
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1621520440748
+Bnd-LastModified: 1621636933727
 Bundle-ActivationPolicy: lazy
 Import-Package: dk.sdu.mmmi.attack;version="1.0.0.SNAPSHOT",dk.sdu.mmm
  i.common.data,dk.sdu.mmmi.common.data.entitypart,dk.sdu.mmmi.common.s

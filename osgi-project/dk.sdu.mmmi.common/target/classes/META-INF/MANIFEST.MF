@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: dk.sdu.mmmi.common
-Built-By: Shark
+Built-By: Daniel Tran
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1621520439173
+Bnd-LastModified: 1621620244857
 Import-Package: dk.sdu.mmmi.common.data,dk.sdu.mmmi.common.data.entity
  part,dk.sdu.mmmi.common.data.worldpart,dk.sdu.mmmi.common.events,dk.s
  du.mmmi.common.services
