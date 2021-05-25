@@ -9,6 +9,11 @@ import dk.sdu.mmmi.common.data.Entity;
 import dk.sdu.mmmi.common.data.GameData;
 import static java.lang.Math.sqrt;
 
+/**
+ *
+ * @author Alexander from: PaxAsteroids/OSGiCommon/dk/sdu/mmmi/cbse/common/data/entityparts/MovingPart
+ * with enhancements.
+ */
 public class Movement implements EntityPart {
 
     private float dx, dy;

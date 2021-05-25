@@ -8,6 +8,11 @@ package dk.sdu.mmmi.common.data.entitypart;
 import dk.sdu.mmmi.common.data.Entity;
 import dk.sdu.mmmi.common.data.GameData;
 
+/**
+ *
+ * @author Alexander from: PaxAsteroids/OSGiCommon/dk/sdu/mmmi/cbse/common/data/entityparts/PositionPart
+ * with enhancements.
+ */
 public class Position implements EntityPart {
 
     private float x;

@@ -3,7 +3,11 @@ Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: dk.sdu.mmmi.commonEnemy
 Built-By: Daniel Tran
 Bundle-ManifestVersion: 2
+<<<<<<< HEAD
 Bnd-LastModified: 1621620259505
+=======
+Bnd-LastModified: 1621613626510
+>>>>>>> EnemyTestBranch
 Bundle-ActivationPolicy: lazy
 Import-Package: dk.sdu.mmmi.common.data,dk.sdu.mmmi.commonEnemy;versio
  n="1.0.0.SNAPSHOT"

@@ -6,6 +6,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ *
+ * @author jcs from: PaxAsteroids/OSGiCommon/dk/sdu/mmmi/cbse/common/data/World
+ * with enhancements.
+ */
 public class World {
 
     private final Map<String, Entity> entityMap = new ConcurrentHashMap<>();

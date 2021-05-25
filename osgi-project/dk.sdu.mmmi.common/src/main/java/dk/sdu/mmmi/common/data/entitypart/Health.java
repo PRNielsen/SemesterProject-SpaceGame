@@ -3,6 +3,10 @@ package dk.sdu.mmmi.common.data.entitypart;
 import dk.sdu.mmmi.common.data.Entity;
 import dk.sdu.mmmi.common.data.GameData;
 
+/**
+ *
+ * @author Someone from repository: PaxAsteroids/OSGiCommon/dk/sdu/mmmi/cbse/common/data/entityparts/LifePart
+ */
 public class Health implements EntityPart {
 
     private boolean dead = false;
