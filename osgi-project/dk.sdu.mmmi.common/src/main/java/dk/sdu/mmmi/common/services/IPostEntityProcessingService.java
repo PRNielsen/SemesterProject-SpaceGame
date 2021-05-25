@@ -5,7 +5,7 @@ import dk.sdu.mmmi.common.data.World;
 
 /**
  *
- * @author jcs
+ * @author jcs from repository: PaxAsteroids/OSGiCommon/dk/sdu/mmmi/cbse/common/data/services/IPostEntityProcessingService
  */
 public interface IPostEntityProcessingService  {
         void process(GameData gameData, World world);

@@ -52,6 +52,13 @@
     <module>dk.sdu.mmmi.common</module>
     <module>dk.sdu.mmmi.libgdx</module>
     <module>Core</module>
+    <module>dk.sdu.mmmi.player</module>
+    <module>AttackSystem</module>
+    <module>dk.sdu.mmmi.room</module>
+    <module>dk.sdu.mmmi.ai</module>
+    <module>dk.sdu.mmmi.commonEnemy</module>
+    <module>dk.sdu.mmmi.Enemy</module>
+    <module>Collision</module>
   </modules>
 
   <build>

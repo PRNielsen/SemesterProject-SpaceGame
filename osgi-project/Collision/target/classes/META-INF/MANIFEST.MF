@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-Description: Generated using Pax-Construct
+Bundle-SymbolicName: Collision
+Built-By: Daniel Tran
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1621620264077
+Bundle-ActivationPolicy: lazy
+Import-Package: dk.sdu.mmmi.Collision;version="1.0.0.SNAPSHOT",dk.sdu.
+ mmmi.common.data,dk.sdu.mmmi.common.data.entitypart,dk.sdu.mmmi.commo
+ n.data.worldpart,dk.sdu.mmmi.common.services
+Service-Component: META-INF/postentityprocessor.xml
+Tool: Bnd-0.0.255
+Export-Package: dk.sdu.mmmi.Collision;uses:="dk.sdu.mmmi.common.data.e
+ ntitypart,dk.sdu.mmmi.common.services,dk.sdu.mmmi.common.data.worldpa
+ rt,dk.sdu.mmmi.common.data";version="1.0.0.SNAPSHOT"
+Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-Name: Collision
+Private-Package: dk.sdu.mmmi.Collision.internal.*
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.8.0_281
+

@@ -10,7 +10,7 @@ import dk.sdu.mmmi.common.data.GameData;
 
 /**
  *
- * @author Alexander
+ * @author Alexander from repository: PaxAsteroids/OSGiCommon/dk/sdu/mmmi/cbse/common/data/entityparts/EntityPart
  */
 public interface EntityPart {
     void process(GameData gameData, Entity entity);

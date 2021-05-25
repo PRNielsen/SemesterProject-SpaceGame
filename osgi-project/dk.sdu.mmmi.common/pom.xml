@@ -42,6 +42,11 @@
       <artifactId>osgi_R4_compendium</artifactId>
       <optional>true</optional>
     </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>Libgdx</artifactId>
+      <version>1.0-SNAPSHOT-001-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 
 </project>

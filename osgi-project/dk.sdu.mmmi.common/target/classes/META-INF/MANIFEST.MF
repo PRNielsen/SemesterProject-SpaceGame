@@ -1,27 +1,20 @@
 Manifest-Version: 1.0
 Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: dk.sdu.mmmi.common
-Built-By: Shark
+Built-By: Daniel Tran
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1620646725864
-Import-Package: dk.sdu.mmmi.common;version="1.0.0.SNAPSHOT",dk.sdu.mmm
- i.common.data;version="1.0.0.SNAPSHOT",dk.sdu.mmmi.common.data.entity
- part;version="1.0.0.SNAPSHOT",dk.sdu.mmmi.common.events;version="1.0.
- 0.SNAPSHOT",dk.sdu.mmmi.common.services;version="1.0.0.SNAPSHOT",org.
- osgi.framework
+Bnd-LastModified: 1621620244857
+Import-Package: dk.sdu.mmmi.common.data,dk.sdu.mmmi.common.data.entity
+ part,dk.sdu.mmmi.common.data.worldpart,dk.sdu.mmmi.common.services
 Tool: Bnd-0.0.255
-Export-Package: dk.sdu.mmmi.common;version="1.0.0.SNAPSHOT",dk.sdu.mmm
- i.common.data.entitypart;uses:="dk.sdu.mmmi.common.data";version="1.0
- .0.SNAPSHOT",dk.sdu.mmmi.common.services;uses:="dk.sdu.mmmi.common.da
- ta";version="1.0.0.SNAPSHOT",dk.sdu.mmmi.common.data;uses:="dk.sdu.mm
- mi.common.data.entitypart,dk.sdu.mmmi.common.events";version="1.0.0.S
- NAPSHOT",dk.sdu.mmmi.common.events;uses:="dk.sdu.mmmi.common.data";ve
- rsion="1.0.0.SNAPSHOT"
+Export-Package: dk.sdu.mmmi.common.data.entitypart;uses:="dk.sdu.mmmi.
+ common.data",dk.sdu.mmmi.common.services;uses:="dk.sdu.mmmi.common.da
+ ta",dk.sdu.mmmi.common.data;uses:="dk.sdu.mmmi.common.data.entitypart
+ ,dk.sdu.mmmi.common.data.worldpart",dk.sdu.mmmi.common.data.worldpart
+ ;uses:="dk.sdu.mmmi.common.data"
 Bundle-Version: 1.0.0.SNAPSHOT
 Bundle-Name: Common
-Private-Package: dk.sdu.mmmi.common.internal
-Ignore-Package: dk.sdu.mmmi.common.internal
-Bundle-Activator: dk.sdu.mmmi.common.internal.ExampleActivator
+Private-Package: dk.sdu.mmmi.common.internal.*
 Created-By: Apache Maven Bundle Plugin
 Build-Jdk: 1.8.0_281
 
