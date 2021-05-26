@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: Attack
-Built-By: Daniel Tran
+Built-By: Shark
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1621620249892
+Bnd-LastModified: 1622063260264
 Bundle-ActivationPolicy: lazy
 Import-Package: dk.sdu.mmmi.attack;version="1.0.0.SNAPSHOT",dk.sdu.mmm
  i.common.data,dk.sdu.mmmi.common.data.entitypart
