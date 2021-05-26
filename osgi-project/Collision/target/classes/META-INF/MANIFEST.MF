@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-Description: Generated using Pax-Construct
 Bundle-SymbolicName: Collision
-Built-By: Daniel Tran
+Built-By: Shark
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1621620264077
+Bnd-LastModified: 1622063267205
 Bundle-ActivationPolicy: lazy
 Import-Package: dk.sdu.mmmi.Collision;version="1.0.0.SNAPSHOT",dk.sdu.
  mmmi.common.data,dk.sdu.mmmi.common.data.entitypart,dk.sdu.mmmi.commo
